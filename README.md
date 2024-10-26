@@ -6,8 +6,7 @@ Project developed for exam activities at UTFPR - Guarapuava, Internet Systems pr
 
 ## Development environment and tools
 
-This repository is a frontend only that will communicate with a backend developed in another repository.
-This project is being developed with:
+This repository contains the frontend only and will communicate with a backend developed in a separate repository. This project is being developed with:
 
 - [Expo 51](https://expo.dev/);
 - [Nativewind](https://www.nativewind.dev/).
