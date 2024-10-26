@@ -25,6 +25,18 @@ This repository contains the frontend only and will communicate with a backend d
 
 This checklist will be updated at each checkpoint to reflect completed functionalities and provide a clear development timeline for the app. If time allows, this checklist will also be updated with new functionalities.
 
+## Interactive Prototype
+
+You can access the full prototype at the link bellow. Note that this prototype also includes the Dungeon Master's view, which will _not_ be implemented in this project.
+
+[Figma Prototype](https://www.figma.com/proto/SrQJozaia8PIFqpcG9C8YB/Themis?node-id=978-3057&node-type=frame&t=RAgKJZajLkuNOlV6-0&scaling=scale-down&content-scaling=fixed&page-id=978%3A2765&starting-point-node-id=978%3A3057)
+
+## Database Diagram
+
+Themys will use Postgres as its main database. Bellow this message, you will find it's database diagram hosted on dbdiagram.io. Again, note that this diagram also includes the complete API planned for this application, which will _not_ be implemented in this project.
+
+[Diagram on DB Diagram](https://dbdiagram.io/d/themys_tcc-66eb48f5a0828f8aa64e39e9)
+
 ## Getting Started
 
 ### Clone Repository
