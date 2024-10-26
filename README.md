@@ -10,7 +10,7 @@ This repository is a frontend only that will communicate with a backend develope
 This project is being developed with:
 
 - [Expo 51](https://expo.dev/);
-- [Nativewind](https://www.nativewind.dev/)
+- [Nativewind](https://www.nativewind.dev/).
 
 ### To run
 
