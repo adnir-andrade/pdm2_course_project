@@ -11,9 +11,9 @@ This repository contains the frontend only and will communicate with a backend d
 - [Expo 51](https://expo.dev/);
 - [Nativewind](https://www.nativewind.dev/).
 
-### To run
+## Getting Started
 
-#### Clone Repository
+### Clone Repository
 
 ```
 $ git clone git@github.com:adnir-andrade/pdm2_course_project.git
