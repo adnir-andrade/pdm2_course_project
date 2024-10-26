@@ -11,6 +11,18 @@ This repository contains the frontend only and will communicate with a backend d
 - [Expo 51](https://expo.dev/);
 - [Nativewind](https://www.nativewind.dev/).
 
+## Core Functionalities (Priority for Implementation)
+
+- [ ] Character Creation: A series of screens that will facilitate the process of creating a Dungeons & Dragons character;
+- [ ] Character Dashboard: Displays basic character information, including stats, conditions, and skills;
+- [ ] Journal: Provides a place for players to write their storyline summaries, major plot points, and notes;
+- [ ] Inventory: Allows access to a simple inventory list where players can manually add items;
+- [ ] Keywords: Highlights certain words that, when interacted with, will open a tooltip to help players understand their meaning and gameplay mechanics;
+- [ ] Character Profile Picture: Enables players to change their character’s profile picture;
+- [ ] Add Campaign: Provides a way for players to group their characters into campaigns.
+
+This checklist will be updated at each checkpoint to reflect completed functionalities and provide a clear development timeline for the app. If time allows, this checklist will also be updated with new functionalities.
+
 ## Getting Started
 
 ### Clone Repository
