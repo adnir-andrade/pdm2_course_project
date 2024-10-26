@@ -1,5 +1,7 @@
 # Themys - Player Access
 
+## About this App
+
 Themys Project is a TTRPG assistant focused on providing players with direct access to essential information about their characters, campaigns, and — especially — access to the Dungeons & Dragons SRD 5.2 for reference. For this course, the scope of this project will comprise only the basic steps needed to create and manage player characters.
 
 Project developed for exam activities at UTFPR - Guarapuava, Internet Systems program.
