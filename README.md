@@ -29,7 +29,8 @@ This checklist will be updated at each checkpoint to reflect completed functiona
 
 You can access the full prototype at the link bellow. Note that this prototype also includes the Dungeon Master's view, which will _not_ be implemented in this project.
 
-[Figma Prototype](https://www.figma.com/proto/SrQJozaia8PIFqpcG9C8YB/Themis?node-id=978-3057&node-type=frame&t=RAgKJZajLkuNOlV6-0&scaling=scale-down&content-scaling=fixed&page-id=978%3A2765&starting-point-node-id=978%3A3057)
+[Figma Prototype Presentation](https://www.figma.com/proto/SrQJozaia8PIFqpcG9C8YB/Themis?node-id=978-3057&node-type=frame&t=RAgKJZajLkuNOlV6-0&scaling=scale-down&content-scaling=fixed&page-id=978%3A2765&starting-point-node-id=978%3A3057)
+[Project's Screens](https://www.figma.com/design/SrQJozaia8PIFqpcG9C8YB/Themis?node-id=978-2765&t=meL8K1telyqV6vQS-1)
 
 ## Database Diagram
 
