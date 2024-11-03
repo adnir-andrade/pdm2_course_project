@@ -2087,6 +2087,11 @@ bl@^4.1.0:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
+boolbase@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
+  integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
+
 bplist-creator@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/bplist-creator/-/bplist-creator-0.0.7.tgz#37df1536092824b87c42f957b01344117372ae45"
@@ -2572,6 +2577,30 @@ crypto-random-string@^2.0.0:
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-2.0.0.tgz#ef2a7a966ec11083388369baa02ebead229b30d5"
   integrity sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==
 
+css-select@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/css-select/-/css-select-5.1.0.tgz#b8ebd6554c3637ccc76688804ad3f6a6fdaea8a6"
+  integrity sha512-nwoRF1rvRRnnCqqY7updORDsuqKzqYJ28+oSMaJMMgOauh3fvwHqMS7EZpIPqK8GL+g9mKxF1vP/ZjSeNjEVHg==
+  dependencies:
+    boolbase "^1.0.0"
+    css-what "^6.1.0"
+    domhandler "^5.0.2"
+    domutils "^3.0.1"
+    nth-check "^2.0.1"
+
+css-tree@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.1.3.tgz#eb4870fb6fd7707327ec95c2ff2ab09b5e8db91d"
+  integrity sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q==
+  dependencies:
+    mdn-data "2.0.14"
+    source-map "^0.6.1"
+
+css-what@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/css-what/-/css-what-6.1.0.tgz#fb5effcf76f1ddea2c81bdfaa4de44e79bac70f4"
+  integrity sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==
+
 cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
@@ -2749,6 +2778,36 @@ dlv@^1.1.3:
   resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
 
+dom-serializer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-2.0.0.tgz#e41b802e1eedf9f6cae183ce5e622d789d7d8e53"
+  integrity sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==
+  dependencies:
+    domelementtype "^2.3.0"
+    domhandler "^5.0.2"
+    entities "^4.2.0"
+
+domelementtype@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-2.3.0.tgz#5c45e8e869952626331d7aab326d01daf65d589d"
+  integrity sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==
+
+domhandler@^5.0.2, domhandler@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-5.0.3.tgz#cc385f7f751f1d1fc650c21374804254538c7d31"
+  integrity sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==
+  dependencies:
+    domelementtype "^2.3.0"
+
+domutils@^3.0.1:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/domutils/-/domutils-3.1.0.tgz#c47f551278d3dc4b0b1ab8cbb42d751a6f0d824e"
+  integrity sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==
+  dependencies:
+    dom-serializer "^2.0.0"
+    domelementtype "^2.3.0"
+    domhandler "^5.0.3"
+
 dotenv-expand@~11.0.6:
   version "11.0.6"
   resolved "https://registry.yarnpkg.com/dotenv-expand/-/dotenv-expand-11.0.6.tgz#f2c840fd924d7c77a94eff98f153331d876882d3"
@@ -2802,6 +2861,11 @@ end-of-stream@^1.1.0:
   integrity sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
   dependencies:
     once "^1.4.0"
+
+entities@^4.2.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/entities/-/entities-4.5.0.tgz#5d268ea5e7113ec74c4d033b79ea5a35a488fb48"
+  integrity sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==
 
 env-editor@^0.4.1:
   version "0.4.2"
@@ -4448,6 +4512,11 @@ md5hex@^1.0.0:
   resolved "https://registry.yarnpkg.com/md5hex/-/md5hex-1.0.0.tgz#ed74b477a2ee9369f75efee2f08d5915e52a42e8"
   integrity sha512-c2YOUbp33+6thdCUi34xIyOU/a7bvGKj/3DB1iaPMTuPHf/Q2d5s4sn1FaCOO43XkXggnb08y5W2PU8UNYNLKQ==
 
+mdn-data@2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
+  integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
+
 memoize-one@^5.0.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-5.2.1.tgz#8337aa3c4335581839ec01c3d594090cebe8f00e"
@@ -4918,6 +4987,13 @@ npm-run-path@^4.0.1:
   integrity sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==
   dependencies:
     path-key "^3.0.0"
+
+nth-check@^2.0.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-2.1.1.tgz#c9eab428effce36cd6b92c924bdb000ef1f1ed1d"
+  integrity sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==
+  dependencies:
+    boolbase "^1.0.0"
 
 nullthrows@^1.1.1:
   version "1.1.1"
@@ -5467,6 +5543,365 @@ react-native-css-interop@0.1.20:
     lightningcss "1.27.0"
     semver "^7.6.3"
 
+react-native-ico-balloons@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-balloons/-/react-native-ico-balloons-4.1.5.tgz#9386360a54316cc1ab72b53b532757e74bc05afb"
+  integrity sha512-1Vf5hXuZNVk0DQE4MABuJU6iyqcVqc8I/Ib3alcqtlFZ//FsBnhKOx5pC73fodDMR5xJA8Q7LQNlgSjR9uMCuQ==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-basic@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-basic/-/react-native-ico-basic-4.1.5.tgz#7f1c920fb2f918519e9c8a65f6863b0af6125991"
+  integrity sha512-TAIihxoTGjCDp7Xoe2jXvvUg40Zmk7c6hhIk9IExtjQxx2u8PfI7QfLyHY+jVM6zU4bxuSwiCS7LuPyejxbfwQ==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-business@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-business/-/react-native-ico-business-4.1.5.tgz#41fc1f6f878472ccfaaf4839a1f9a2128396f65d"
+  integrity sha512-TlBk2pB988KYbox7/hdfMCzjRgtgJXtot0JjN70AzbwoFOGdx+65FPDjMGy4xe6gyk5GexvkaYMBTiIG/c35Gw==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-christmas@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-christmas/-/react-native-ico-christmas-4.1.5.tgz#056ccb54254237f5b7fa3cddb8736e2bd0cf6551"
+  integrity sha512-ns3nKHClGP5hz2Y5OXnfwW6Aj7V+TEoIJmAZEICnNM0pcNb6J65ZxjIabYQRUqeOqih2sKTAwoTmzxIxcBxZ9g==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-coolicons@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-coolicons/-/react-native-ico-coolicons-4.1.5.tgz#127a056f909de9bfbf274abcd4e344d395e9ca8b"
+  integrity sha512-/uNpCa8Yn6beVQQRitQQC1mKIJbpF/61cVC68Qi6PT0GP39rqRra2KMbw0MjmHgFGxlnW5b83mAdcjvx8esLXA==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-cryptocurrency@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-cryptocurrency/-/react-native-ico-cryptocurrency-4.1.5.tgz#51d9392525b1731af3370f65d1fd97ac55eeb21a"
+  integrity sha512-7MYGErrDTZdmMokYYcjIwQQu72mIOYXMdogfOzhldjRlLwoVx2sNsL0PdBZPJ5BanBPT2PqwRKs+Ny4PiRb4sA==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-dazzle-line@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-dazzle-line/-/react-native-ico-dazzle-line-4.1.5.tgz#a384fe904ebf520c6aba2ddceea7ca78ffec47c9"
+  integrity sha512-31wkNA/ezr1a/xYyjr7hgnptSfAk9NGyFxkN1+Bv5JAjjoirCnLTZMG8TgvlTRET4+gzZFrekYrLuGQOiD4GsQ==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-default@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-default/-/react-native-ico-default-4.1.5.tgz#6492f499ffab030f5bcdeacb62e971d2c7155f7f"
+  integrity sha512-BAL6OoHXrc5A7g3iQq3vZ1SuGxUqpx/frVBpiMZavl3Wt60PNhGpgMFcIgGY1PyDf+spEq+/kBDMuWXiDKGxUQ==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-ecologism@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-ecologism/-/react-native-ico-ecologism-4.1.5.tgz#44c99169c9cde3984f5041dc0066929694724f77"
+  integrity sha512-t+w6vG3gA8yo4AFV1w/ch/dH6Yyrp7pIEMae6PgawBbE2oP7GNxH8zAGWnP+xB2aI/G48abIRzcA1A/bB9aoHw==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-emojione-emojis-mono@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-emojione-emojis-mono/-/react-native-ico-emojione-emojis-mono-4.1.5.tgz#f8143fcb53634bbbd74c1c4ea211476cec13727f"
+  integrity sha512-HvxaG/9UUw8+SzY8UPiPq1Cg6CCbxC5WPCR/tn+KAunYU66Ijm2/u02QxJhd/Fb/MhBP4najc+zmZCeSsVLtpg==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-emojione-emojis@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-emojione-emojis/-/react-native-ico-emojione-emojis-4.1.5.tgz#7cd1e2deb29dac7414f60ac897feadd3cf1e21dc"
+  integrity sha512-byl+sjaWfBLOfbMGruWvFPuRUeMvrnPRerN9ROkWxYcCF/7rCTQVWPEbT9XV2Gjc28GKFQDZXZCHC5gCRW7jzg==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-essential@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-essential/-/react-native-ico-essential-4.1.5.tgz#f6bf555ee13a5ac0f0fd5001a3101d2dae10c3c3"
+  integrity sha512-HKc+xXLPV6pvxMupZXjnoH5pyWkUg/fO7mw/pF1Xi+myBd81ot0BeueO5sfIGAYQgs2pNffT1lTPw1swwrYj/A==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-file-folder@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-file-folder/-/react-native-ico-file-folder-4.1.5.tgz#44c3f28b78e377c1836899f7ef3bf2c51a86ba8b"
+  integrity sha512-sHpxrt2SsHU+dVLbgnoyWqERsPn8nXZwicbcnix7bxFkU0BTZFfbCbVdb9u2/cPpvIk45CFX8hWonXjTSXzA9w==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-flags@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-flags/-/react-native-ico-flags-4.1.5.tgz#d6243dfbf6752d6e3cd13317a9bdca6ced52a5c5"
+  integrity sha512-/gWHf30tZHDQlQHwoTt2b5AHmsWiN/5Xi9U1JjBc7Ttvgn0BlMlVtXq7XvGZDlgXf2zLfqfYLQXR2I3kzUliEA==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-font-awesome@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-font-awesome/-/react-native-ico-font-awesome-4.1.5.tgz#92a748d12e66223e8b4be56f8dd1666bf77141a5"
+  integrity sha512-wjEcCQOET21sOBf8Ah/1/YRFTQyJQ2FqUxg11vuBShWUungJ2XkASAYVBLu55MDynL+TTFMmLZwSeerMCabU3w==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-gastronomy-set@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-gastronomy-set/-/react-native-ico-gastronomy-set-4.1.5.tgz#08cbe2b6e10401e2965189ead6018ae0d62d6f2a"
+  integrity sha512-q/3gRKfC0tQhjVJSdPz6a/pKo7QP0LSfvHB9JUvC0NoEns+J2zfUPKvcfkd4GluS/ZjuNfvVufnjtOkmdP8+BA==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-interaction@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-interaction/-/react-native-ico-interaction-4.1.5.tgz#4e68abade118c1431e0f3274fc544fa30604b244"
+  integrity sha512-BFsxLhqTyJcod5/67fI3Pau82vfccbDv4hCKUxmYWayUdDENI6PUnDWM/BCsz/DYBhw08tyKWDUwiCePcAAj+Q==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-lodgicons@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-lodgicons/-/react-native-ico-lodgicons-4.1.5.tgz#92e23700df2f8970616a43230fdd7b83a24a51a8"
+  integrity sha512-J/ez7+x8TKpLqNNo1o4Pa+x4foCNnTZ40h1zt9HLZod7XWQZmhmIRQ7kgW8iM7quAG3THm/PacyDaBPzFMdiUQ==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-logistics-delivery@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-logistics-delivery/-/react-native-ico-logistics-delivery-4.1.5.tgz#c891322d7277ad3fbc3642aea68cb3393b617320"
+  integrity sha512-HUqcwU1vO4ww+Af2UoB2xcBpxDWyjwuq8ziRzRuN2XVy2yWiuO/e6GEqagxVMjVfbWWd7bQZuCZsxdkdLDQBzg==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-logo@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-logo/-/react-native-ico-logo-4.1.5.tgz#e6a689a741c9d7e93152368c426eca752727f2f2"
+  integrity sha512-Z8FPqqg5j9WomsJFzFPjz6gxzRo5fbZoorLJEDwB4zxSfRWyNJu0JGBd3CK8qvrdpYSZuW1JkTB3lwmibt9iVA==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-logos@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-logos/-/react-native-ico-logos-4.1.5.tgz#92adff4f8450b9e5b757335f75f5d2a11bad8162"
+  integrity sha512-qRiw5JatkrpKbTcUXECAlZi9/z3cgvcc6tU3ava4xUyk+gdSRd7kuubA2gamczE2zt85b34C/H/4u/g7Z6ywqw==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-material-design@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-material-design/-/react-native-ico-material-design-4.1.5.tgz#d89997e2bedc7b23c1ac1fa37ff64989e8bda80c"
+  integrity sha512-RkfFueVmSmmToT64SScLUR4zxSdxjZ37buPM4epaLINg21ws/dKMlE0MmNt9lCdcX/tTzq+ruj7SvqKGhjXnIA==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-mingcute-tiny-bold-filled@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-mingcute-tiny-bold-filled/-/react-native-ico-mingcute-tiny-bold-filled-4.1.5.tgz#db4bb3b664cd5e71df5e5d9c1d728c0ef0d1bfd8"
+  integrity sha512-g//CYb7TeTjUaV16DESEX91wLD+V0dX8B3ZriT5OxfkTlCE+B07m+xuD4KxArfwJ2oEMWr381gWn6r+GxbGKsw==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-miscellaneous@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-miscellaneous/-/react-native-ico-miscellaneous-4.1.5.tgz#b1522f93ee499b87d572a077f5ec149189ad4562"
+  integrity sha512-bhCXZ5cswWGZuAboVdWwsPJ+cRXIABpkPbMoF1fKHLAs51Yd5EOzy/V7MjOe+eQFWpctlqnxDjzKiMfQs9AiRQ==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-modern-ui@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-modern-ui/-/react-native-ico-modern-ui-4.1.5.tgz#883ae0c2ea63ee6fc1f3fbfe1cda16b139b23f23"
+  integrity sha512-iSKTfzEDFWaQNxVoYijcHf5uUub1+CYVFZvqOBHeI392SLhQbVgvLdz4nXU9y0LyovpI1ryAu4PBPY6PGWiFvg==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-new-year@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-new-year/-/react-native-ico-new-year-4.1.5.tgz#e291f43f4285bec04876291f4db78b3c13d3d1f6"
+  integrity sha512-i4FqzszkHyldtMehtHtjPKzWhZi2i888cg+f5CdrhvxdCDmBSQ680IoeD/K2Dz1z3updZDNZAzA3FNr7kfJMQw==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-noto-emojis@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-noto-emojis/-/react-native-ico-noto-emojis-4.1.5.tgz#7ff597042b17feaffd3c2663e26b6060d769ce39"
+  integrity sha512-NemRv0SW9pv8uS91lITGAMTpXeFxcwK1Lu8K/+6t8+iRp8816if6knCpF5ZoKokvn1jWnmv20AmRndYp39dcbw==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-payment-method@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-payment-method/-/react-native-ico-payment-method-4.1.5.tgz#3f9fdbf714e1608895af9d952533beb60573b48f"
+  integrity sha512-oALCO1/R0oFBa/wBCPIYke3EIMHsI7A8Wyh50WOmj+/cmg3bnbDcERgykWCAYWUVX2M0sg8nP0aG1yQXS81lmw==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-phones-and-mobiles@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-phones-and-mobiles/-/react-native-ico-phones-and-mobiles-4.1.5.tgz#893bc80dbeac6c58dbcef0ec3d8d536ee025b89f"
+  integrity sha512-Pc5s6J//lW+9yeyU2D9eMbtwf6f58V32tn2xgORsf9iHf2Q5pjCYTB/9fXslOFlGis+IY65vf09dpR/mgfYDDA==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-pixel@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-pixel/-/react-native-ico-pixel-4.1.5.tgz#4590517e683ddbb11ac23e645bd9955eada67aa0"
+  integrity sha512-LFJzIEO+erAQGrv7K4mrsogBaM69S1EZJ5FgJsvHcE9EhBvwN1XmBLi/eXquTOzq95QseGmebPOwa00Ac7o1IQ==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-rpg-game@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-rpg-game/-/react-native-ico-rpg-game-4.1.5.tgz#7e514c9d9e1858ada76d988f74927ec5dfecc738"
+  integrity sha512-noUCH7iohXUGpHxu/5n8Jbr/9jX1qqypNzT7gLNiaLf++CyVxuBZJanyqspY2DzXW86Z4Zah28u6wonYSRFxvQ==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-sensa-emoji-vectors@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-sensa-emoji-vectors/-/react-native-ico-sensa-emoji-vectors-4.1.5.tgz#9538be605676c8fc79b1481463fb1026ca33f306"
+  integrity sha512-mUe4LWzU01Z+oH7oUTloowDZUGC3QUY0fIpYvShjG/bpR3mrayB5Llk5qjz/RWfofGnO0YdM/zfYEYvueXr0jA==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-shopping@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-shopping/-/react-native-ico-shopping-4.1.5.tgz#28ba3c511d57d9e6e117a3fe4081693579f9cce3"
+  integrity sha512-Yp544+pxuqYvbAvnFiUo0Yx9j05BkGxnoZUh1xwLFQX1ArozKDd5JmYSaHhcoSLX/dw0gXzVc6tpP8oHigUQAg==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-sign-and-symbols@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-sign-and-symbols/-/react-native-ico-sign-and-symbols-4.1.5.tgz#dda05c43e3c82afe3b6affe75fb088dde06ce4f0"
+  integrity sha512-Uyzawkbn8rAPotlJ2KGKOtZ3wudYlNt2Q0GtLcEGmiDkppvxohftJntHtgI0+YPIlzvao3d3OINGjIbYbI8Etg==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-social-icons-rounded@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-social-icons-rounded/-/react-native-ico-social-icons-rounded-4.1.5.tgz#29a899448fb65bf4b88bda7a4fb83c252fc6867f"
+  integrity sha512-t6v5382MXirIXg1JWZMSh1/E2b3eckLpU+bT33ftNnm8WZSM46BVjqsA32I7Dj+LCIP0IgoHSjJZx4wXvWEObg==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-social-icons@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-social-icons/-/react-native-ico-social-icons-4.1.5.tgz#53f24ff15678b6c1e91efae208c2a92f640c27b0"
+  integrity sha512-Lqe1ja181EUNSn40TpSt+IvHulbNFffZqTocheF9KBOn5sNzDCAcPpDE1zCCZHyzo9jftnW+z7zLapn7p/H5kA==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-social-media@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-social-media/-/react-native-ico-social-media-4.1.5.tgz#47eaec5699350aab8005fc2a4c7401eadbf216bf"
+  integrity sha512-WJF+hFNbO6FCi7IDQt8TkhryyrUtg+x+9vHQGgy/N/zLlnpJpl5oVpDP8kJVYCWG8inASma2z8fSejBdRwYLYQ==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-software-development@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-software-development/-/react-native-ico-software-development-4.1.5.tgz#f33e7f8fdd0f1889045920eeb605bc9ac73f865a"
+  integrity sha512-cBCpqNJe3cFJa1YKnVAWNkSoC5iptLHk8WS3qv0AGa5GiXUxOhoCL8eB1jYrF2KmKeI/oG4NgXIdY5UBjw4sag==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-stylish@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-stylish/-/react-native-ico-stylish-4.1.5.tgz#ca86fa6a916eb96cb9e01be35921b6d3fa0a6e59"
+  integrity sha512-o/fI7kj9/w6w/NPGaYrtZCtd4vtLy1u/OznzuUSJQmfIMVhTznsHTvi8iuIuSwvydsk1S4mPiGqMSLERz9a4vA==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-supraicons@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-supraicons/-/react-native-ico-supraicons-4.1.5.tgz#0a4695fb9d99c65d323e7e0b74a8e4c1188d516c"
+  integrity sha512-xy+Cqaz+8gJBjRAOCZGEhkZ8v3qXAvgbPOV0NE4CrH19IzqwpWsqfqM0XFAghe3+yi+YQf9nSu9xO4sQKfFPAg==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-technology-logos@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-technology-logos/-/react-native-ico-technology-logos-4.1.5.tgz#0bf5f7023d26d8284200ea8dc46f6bdf502eb5f4"
+  integrity sha512-hISvUN3pR/npkF8LU/bHYLshFXVVxWlfi4FpQISZVOKQ7x5Bt7VZHiUk7NLf3ygHnoBeTq6lj1l3eJQzgbYb6w==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-transport-logos@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-transport-logos/-/react-native-ico-transport-logos-4.1.5.tgz#bf292a820bd7854836182926947c46380ab8e36b"
+  integrity sha512-3hO0ojhuFJslQu0DNuOsWpZ2JW1vNQDy2FmrujMnQpfDC9q3PQv3npMX8N492k8D6/rq+uxem5mArUbtsvYlWQ==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-ui-interface@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-ui-interface/-/react-native-ico-ui-interface-4.1.5.tgz#5ed69f4fff5df491351354525a987c2fa598e953"
+  integrity sha512-/eKYtRRg4zGpPK9ha76cGho2kqgG2L5V10Tg/tyq/Q5SDgw3xn2vERuIEA24Duz0cQ7GszCfHi+bVjl7sCqlRw==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico-universalicons@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-ico-universalicons/-/react-native-ico-universalicons-4.1.5.tgz#670ce95e718f13793cffd55d16439804d6062f7d"
+  integrity sha512-4xhNpSICUKnhUvD4XGYPRO5Ox87/87pbKw89CisU7YZjgifeJlYCXr9GjRq8+4ezSl1u5AVfrVT4jZRFb5/Srw==
+  dependencies:
+    react-svg-main "^3.0.1"
+
+react-native-ico@^43.7.4:
+  version "43.7.4"
+  resolved "https://registry.yarnpkg.com/react-native-ico/-/react-native-ico-43.7.4.tgz#7ca7b35316b0f149fe4859c8a0df89d7a3909b34"
+  integrity sha512-s6Cf3mu/qTkU3dtVIhNUvAiaXZpvN/Utp7y6bc96M1UgtDIjinRHUgkfnXhUUcTq0TidjLp29BQP6qx8xTpwgA==
+  dependencies:
+    react-native-ico-balloons "^4.1.4"
+    react-native-ico-basic "^4.1.4"
+    react-native-ico-business "^4.1.4"
+    react-native-ico-christmas "^4.1.4"
+    react-native-ico-coolicons "^4.1.4"
+    react-native-ico-cryptocurrency "^4.1.4"
+    react-native-ico-dazzle-line "^4.1.4"
+    react-native-ico-default "^4.1.4"
+    react-native-ico-ecologism "^4.1.4"
+    react-native-ico-emojione-emojis "^4.1.4"
+    react-native-ico-emojione-emojis-mono "^4.1.4"
+    react-native-ico-essential "^4.1.4"
+    react-native-ico-file-folder "^4.1.4"
+    react-native-ico-flags "^4.1.4"
+    react-native-ico-font-awesome "^4.1.4"
+    react-native-ico-gastronomy-set "^4.1.4"
+    react-native-ico-interaction "^4.1.4"
+    react-native-ico-lodgicons "^4.1.4"
+    react-native-ico-logistics-delivery "^4.1.4"
+    react-native-ico-logo "^4.1.4"
+    react-native-ico-logos "^4.1.4"
+    react-native-ico-material-design "^4.1.4"
+    react-native-ico-mingcute-tiny-bold-filled "^4.1.4"
+    react-native-ico-miscellaneous "^4.1.4"
+    react-native-ico-modern-ui "^4.1.4"
+    react-native-ico-new-year "^4.1.4"
+    react-native-ico-noto-emojis "^4.1.4"
+    react-native-ico-payment-method "^4.1.4"
+    react-native-ico-phones-and-mobiles "^4.1.4"
+    react-native-ico-pixel "^4.1.4"
+    react-native-ico-rpg-game "^4.1.4"
+    react-native-ico-sensa-emoji-vectors "^4.1.4"
+    react-native-ico-shopping "^4.1.4"
+    react-native-ico-sign-and-symbols "^4.1.4"
+    react-native-ico-social-icons "^4.1.4"
+    react-native-ico-social-icons-rounded "^4.1.4"
+    react-native-ico-social-media "^4.1.4"
+    react-native-ico-software-development "^4.1.4"
+    react-native-ico-stylish "^4.1.4"
+    react-native-ico-supraicons "^4.1.4"
+    react-native-ico-technology-logos "^4.1.4"
+    react-native-ico-transport-logos "^4.1.4"
+    react-native-ico-ui-interface "^4.1.4"
+    react-native-ico-universalicons "^4.1.4"
+    react-svg-main "^3.0.1"
+
 react-native-reanimated@~3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-3.10.1.tgz#3c37d1100bbba0065df39c96aab0c1ff1b50c0fa"
@@ -5485,6 +5920,23 @@ react-native-safe-area-context@4.10.5:
   version "4.10.5"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-4.10.5.tgz#a9c677a48bd273afa6876772062ce08e8af1f18d"
   integrity sha512-Wyb0Nqw2XJ6oZxW/cK8k5q7/UAhg/wbEG6UVf89rQqecDZTDA5ic//P9J6VvJRVZerzGmxWQpVuM7f+PRYUM4g==
+
+react-native-svg@^13.13.0:
+  version "13.14.1"
+  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-13.14.1.tgz#265ec50b57dc042b8b8bd55d03aaf394d1ba9f7a"
+  integrity sha512-0DSa0EOySzV0J9utmRFVE5Vr4mKRXA7GtH1Ga1B6fzR967HGFW1ytH6hmnOf36316hjYpXMMB7s4oVe1FqghlQ==
+  dependencies:
+    css-select "^5.1.0"
+    css-tree "^1.1.3"
+
+react-native-svg@^15.8.0:
+  version "15.8.0"
+  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-15.8.0.tgz#9b5fd4f5cf5675197b3f4cbfcc77c215de2b9502"
+  integrity sha512-KHJzKpgOjwj1qeZzsBjxNdoIgv2zNCO9fVcoq2TEhTRsVV5DGTZ9JzUZwybd7q4giT/H3RdtqC3u44dWdO0Ffw==
+  dependencies:
+    css-select "^5.1.0"
+    css-tree "^1.1.3"
+    warn-once "0.1.1"
 
 react-native@0.74.5:
   version "0.74.5"
@@ -5541,6 +5993,13 @@ react-shallow-renderer@^16.15.0:
   dependencies:
     object-assign "^4.1.1"
     react-is "^16.12.0 || ^17.0.0 || ^18.0.0"
+
+react-svg-main@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-svg-main/-/react-svg-main-3.0.1.tgz#b4160dd16ac42e26bc5e953d454940d5fa10b84d"
+  integrity sha512-PUMNkJhdI9Fr1Pw/C/yFo7I7sRiwNlZaV3ZyXnKJlyzVhlcdJUhMejivNrUAOhWLpyIYgQZ4hRYp/6IgmjFE1g==
+  dependencies:
+    react-native-svg "^13.13.0"
 
 react@18.2.0:
   version "18.2.0"
@@ -6024,7 +6483,7 @@ source-map@^0.5.0, source-map@^0.5.6:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ==
 
-source-map@^0.6.0, source-map@~0.6.1:
+source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
@@ -6712,6 +7171,11 @@ walker@^1.0.7:
   integrity sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==
   dependencies:
     makeerror "1.0.12"
+
+warn-once@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/warn-once/-/warn-once-0.1.1.tgz#952088f4fb56896e73fd4e6a3767272a3fccce43"
+  integrity sha512-VkQZJbO8zVImzYFteBXvBOZEl1qL175WH8VmZcxF2fZAoudNhNDvHi+doCaAEdU2l2vtcIwa2zn0QK5+I1HQ3Q==
 
 wcwidth@^1.0.1:
   version "1.0.1"
