@@ -57,7 +57,7 @@ Later on, those sprints will be replaced by YouTrack, an agile project managemen
 ### Clone Repository
 
 ```sh
-git clone git@github.com:adnir-andrade/pdm2_course_project.git
+git clone https://github.com/adnir-andrade/pdm2_course_project.git
 cd pmd2_course_project
 ```
 
