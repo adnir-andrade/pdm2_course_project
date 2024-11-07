@@ -772,6 +772,16 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
+"@expo-google-fonts/cinzel-decorative@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/cinzel-decorative/-/cinzel-decorative-0.2.3.tgz#1105dfac9510015c121681afadacbf29c548e038"
+  integrity sha512-azj3vCLB33pSsl0FOXM2pGFEnXxCEYGAr1W+rTqwN6Mhl6NX2CFBt17Nsmj0uOW8DmFIyVpqBKN7tLBaAaHPoQ==
+
+"@expo-google-fonts/cinzel@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/cinzel/-/cinzel-0.2.3.tgz#0fe277cc2c26e99ae3b5d647841f4bc587681dce"
+  integrity sha512-fGSiWMAHJfXvkGQBJ2sWw6c0hSx2hgtMtN7cuFe6o6H/0nL4ttZG/SoEAJXQJU9YjMdduj/1uKkFm5CfRtorGw==
+
 "@expo/bunyan@^4.0.0":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.1.tgz#ab9e17e36c71c704a0ce72168378a487368da736"
