@@ -12,7 +12,7 @@ export default function Button({ title, onPress }: ImageProps) {
 
   return (
     <TouchableOpacity
-      className={`w-248 h-[80] px-4 py-2 bg-themys-dune border border-themys-straw gap-1 justify-center ${roundedBorders}`}
+      className={`w-248 h-[80] px-4 py-2 bg-themys-dune border border-themys-straw justify-center ${roundedBorders}`}
       onPress={onPress}
     >
       <Text className="text-center text-themys-straw text-4xl font-cinzel-decorative-bold">
