@@ -1,19 +1,24 @@
-import { Text, View } from 'react-native';
-import Icon from "react-native-ico-rpg-game";
-import {Button} from "@rneui/themed";
-import {StatusBar} from "expo-status-bar";
+import { Text, View } from "react-native";
+import Button from "../components/Button";
 
 export default function Home() {
-    return (
-        <View className="flex-1 items-center justify-center">
-            <Text className="text-2xl">Open up app/index.tsx to start working on your app!</Text>
-            <Icon name="wyvern" height="120" width="120"></Icon>
-            <Button title={'React Native Elements Button'}
-                    buttonStyle={{backgroundColor: 'rgba(39, 39, 39, 1)'}}
-                    containerStyle={{width: 200,
-                        marginHorizontal: 50,
-                        marginVertical: 10}} />
-            <StatusBar style="auto" />
+  const buttonFunction = () => {
+    console.log("click");
+  };
+
+  return (
+    <>
+      <View className="flex-1 pt-36 bg-slate-900">
+        <View className="w-full h-36 flex items-center justify-center">
+          <Text className="py-11 text-themys-tussock text-8xl font-cinzel-decorative-bold text-shadow">
+            Themys
+          </Text>
         </View>
-    );
+        <View className="self-center mt-20 gap-16">
+          <Button title="Sign In" onPress={buttonFunction} />
+          <Button title="Log In" onPress={buttonFunction} />
+        </View>
+      </View>
+    </>
+  );
 }
