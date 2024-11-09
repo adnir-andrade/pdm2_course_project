@@ -3,10 +3,16 @@ import React, { useState } from "react";
 
 type InputProp = {
   label: string;
+  value: string;
+  onChangeText: (text: string) => void;
 } & TextInputProps;
 
-export default function Input({ label, ...rest }: InputProp) {
-  const [value, setValue] = useState("");
+export default function Input({
+  label,
+  value,
+  onChangeText,
+  ...rest
+}: InputProp) {
   const [isFocused, setIsFocused] = useState(false);
 
   const handleFocus = () => setIsFocused(true);
@@ -18,7 +24,7 @@ export default function Input({ label, ...rest }: InputProp) {
     >
       <TextInput
         value={value}
-        onChangeText={setValue}
+        onChangeText={onChangeText}
         onFocus={handleFocus}
         onBlur={handleBlur}
         className="text-themys-soft-peach font-cinzel-regular text-lg"
