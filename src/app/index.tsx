@@ -4,7 +4,7 @@ import Watermark from "../common/components/Watermark";
 import HomeScreen from "./Home/screens/HomeScreen";
 import React from "react";
 
-export default function Home() {
+export default function index() {
   return (
     <Background>
       <Watermark />
