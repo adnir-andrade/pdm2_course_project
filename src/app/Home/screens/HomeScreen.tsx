@@ -3,6 +3,7 @@ import React from "react";
 import Logo from "../../../common/components/Logo";
 import Button from "../../../common/components/Button";
 import GoogleLogo from "../components/GoogleLogo";
+import { Link } from "expo-router";
 
 export default function Home() {
   const signInHandler = () => {
@@ -19,8 +20,10 @@ export default function Home() {
         <Logo />
       </View>
       <View className="basis-4/6 justify-center items-center gap-10 w-full">
-        <Button title="Sign In" onPress={signInHandler} />
-        <Button title="Log In" onPress={logInHandler} />
+        <Button.Touchable title="Sign In" onPress={signInHandler} />
+        <Link href={{ pathname: "/Login/screens/LoginScreen" }}>
+          <Button title="Log In" />
+        </Link>
       </View>
       <View className="basis-1/6 justify-center items-center">
         <Text className="font-cinzel-bold text-themys-straw text-2xl">
