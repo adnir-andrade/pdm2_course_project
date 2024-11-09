@@ -1,14 +1,14 @@
-import { Text, TouchableOpacityProps, View } from "react-native";
+import { Text, View } from "react-native";
 import React from "react";
 import Touchable from "../Button/Touchable";
 import { Link } from "expo-router";
 
-type ImageProps = {
+type ButtonProps = {
   title: string;
   path: string;
-} & TouchableOpacityProps;
+};
 
-export default function Button({ title, path }: ImageProps) {
+export default function Button({ title, path }: ButtonProps) {
   const roundedBorders =
     "rounded-tl-[35] rounded-br-[35] rounded-bl-[15] rounded-tr-[15]";
 

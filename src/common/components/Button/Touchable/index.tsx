@@ -1,12 +1,12 @@
 import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 import React from "react";
 
-type ImageProps = {
+type ButtonProps = {
   title: string;
   onPress: () => void;
 } & TouchableOpacityProps;
 
-export default function Button({ title, onPress }: ImageProps) {
+export default function Button({ title, onPress }: ButtonProps) {
   const roundedBorders =
     "rounded-tl-[35] rounded-br-[35] rounded-bl-[15] rounded-tr-[15]";
 
