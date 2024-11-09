@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import Button from "../components/Button";
+import Button from "../common/components/Button";
 
 export default function Home() {
   const buttonFunction = () => {

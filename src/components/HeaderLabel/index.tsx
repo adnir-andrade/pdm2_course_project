@@ -1,7 +1,7 @@
-import React from 'react';
-import Text from '../Text';
-import { View } from 'react-native';
-import {Card} from "@rneui/base";
+import React from "react";
+import Text from "../../common/components/Text";
+import { View } from "react-native";
+import { Card } from "@rneui/base";
 
 type HeaderLabelProps = {
   title: string;
