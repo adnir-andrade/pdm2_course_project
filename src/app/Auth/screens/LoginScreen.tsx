@@ -5,37 +5,21 @@ import Watermark from "../../../common/components/Watermark";
 import Logo from "../../../common/components/Logo";
 import Input from "../../../common/Input";
 import Button from "../../../common/components/Button";
-import { users } from "../../../mocks/MOCK_USER";
+import { authenticateUser } from "../services/authService";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const findUserByEmail = (email: string) => {
-    console.log(email);
-    return users.find((user) => user.email === email);
-  };
-
-  const checkPassword = (userPassword: string, inputPassword: string) => {
-    return userPassword === inputPassword;
-  };
-
   const logInHandler = async () => {
-    const user = findUserByEmail(email);
+    const { success, message } = await authenticateUser(email, password);
 
-    if (!user) {
-      Alert.alert("Email not found!");
+    if (success) {
+      console.log(message);
       return;
     }
 
-    const isPasswordCorrect = checkPassword(user.password, password);
-
-    if (!isPasswordCorrect) {
-      Alert.alert("Incorrect password");
-      return;
-    }
-
-    console.log("Log in successful!");
+    Alert.alert(message);
   };
 
   return (
