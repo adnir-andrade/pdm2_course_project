@@ -4,7 +4,7 @@ import Logo from "../../../common/components/Logo";
 import Button from "../../../common/components/Button";
 import GoogleLogo from "../components/GoogleLogo";
 
-export default function Login() {
+export default function Home() {
   const buttonFunction = () => {
     console.log("click");
   };

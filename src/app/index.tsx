@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import Background from "../common/components/Background";
 import Watermark from "../common/components/Watermark";
-import LoginScreen from "../app/Login/screens/LoginScreen";
+import HomeScreen from "./Home/screens/HomeScreen";
 import React from "react";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <Watermark />
       <View className="h-full justify-center items-center">
         <Background.Transparent>
-          <LoginScreen />
+          <HomeScreen />
         </Background.Transparent>
       </View>
     </Background>
