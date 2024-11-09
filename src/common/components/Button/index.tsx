@@ -1,6 +1,7 @@
 import { Text, View } from "react-native";
 import React from "react";
 import Touchable from "../Button/Touchable";
+import Slim from "../Button/Slim";
 import { Link } from "expo-router";
 
 type ButtonProps = {
@@ -26,3 +27,4 @@ export default function Button({ title, path }: ButtonProps) {
 }
 
 Button.Touchable = Touchable;
+Button.Slim = Slim;
