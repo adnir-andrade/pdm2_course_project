@@ -1,8 +1,8 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import Logo from "../../../common/components/Logo";
 import Button from "../../../common/components/Button";
-import GoogleLogo from "../components/GoogleLogo";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const signInHandler = () => {
@@ -18,11 +18,8 @@ export default function Home() {
         <Button.Touchable title="Sign In" onPress={signInHandler} />
         <Button title="Log In" path="/Auth/screens/LoginScreen" />
       </View>
-      <View className="basis-1/6 justify-center items-center">
-        <Text className="font-cinzel-bold text-themys-straw text-2xl">
-          Or Log In with
-        </Text>
-        <GoogleLogo />
+      <View className="basis-1/6 justify-center items-center gap-3">
+        <Footer />
       </View>
     </View>
   );
