@@ -16,7 +16,7 @@ export default function Home() {
       </View>
       <View className="basis-4/6 justify-center items-center gap-10 w-full">
         <Button.Touchable title="Sign In" onPress={signInHandler} />
-        <Button title="Log In" path="/Login/screens/LoginScreen" />
+        <Button title="Log In" path="/Auth/screens/LoginScreen" />
       </View>
       <View className="basis-1/6 justify-center items-center">
         <Text className="font-cinzel-bold text-themys-straw text-2xl">

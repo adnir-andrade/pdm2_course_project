@@ -10,7 +10,7 @@ export default function Layout() {
   return (
     <Stack screenOptions={{ headerShown: false, headerTitle: "Home" }}>
       <Stack.Screen
-        name="Login/screens/LoginScreen"
+        name="Auth/screens/LoginScreen"
         options={{
           headerShown: true,
           headerTitle: "Login",
