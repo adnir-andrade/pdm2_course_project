@@ -14,12 +14,12 @@ module.exports = {
       },
       boxShadow: {
         basic: "0px 4px 4px rgba(0, 0, 0, 0.50)",
-        input: "5px 5px 4px rgba(59, 54, 52, 1)",
+        input: "inset 5px 5px 4px rgba(59, 54, 52, 1)",
       },
       textShadow: {
-        sm: "0 1px 2px rgba(0, 0, 0, 0.75)",
+        sm: "inset 3px 4px 2px rgba(0 0 0 / 0.25)",
         DEFAULT: "0 4px 4px rgba(22, 22, 22, 1)",
-        lg: "3px 2px 2px rgba(0, 0, 0, 0.75)",
+        lg: "inset 3px 2px 2px rgba(0, 0, 0, 1)",
         glow: "0 0 10px rgba(207, 190, 134, 1)",
       },
       colors: {
