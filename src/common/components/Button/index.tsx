@@ -16,9 +16,9 @@ export default function Button({ title, path }: ButtonProps) {
   return (
     <Link href={{ pathname: path }}>
       <View
-        className={`w-248 h-[80] px-4 py-2 bg-themys-dune border border-themys-straw justify-center ${roundedBorders}`}
+        className={`w-248 h-[80] px-4 py-2 bg-themys-dune border border-themys-straw justify-center shadow-basic ${roundedBorders}`}
       >
-        <Text className="text-center text-themys-straw text-4xl font-cinzel-decorative-bold -bottom-1">
+        <Text className="text-center text-themys-straw text-4xl font-cinzel-decorative-bold -bottom-1 text-shadow-sm">
           {title}
         </Text>
       </View>
