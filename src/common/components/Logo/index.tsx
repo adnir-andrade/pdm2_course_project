@@ -7,7 +7,7 @@ export default function Logo() {
   return (
     <ImageBackground
       source={logoPath}
-      className="w-full h-full"
+      className="w-full min-h-10 max-h-24 h-full"
       resizeMode={"contain"}
     />
   );
