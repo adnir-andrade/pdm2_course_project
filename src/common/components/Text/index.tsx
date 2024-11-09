@@ -1,6 +1,6 @@
-import { View, Text as ReactText } from 'react-native';
-import Title from './Title';
-import React from 'react';
+import { Text as ReactText } from "react-native";
+import Title from "./Title";
+import React from "react";
 
 type TextProps = {
   children: string;
