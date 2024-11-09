@@ -7,5 +7,15 @@ export default function Layout() {
 
   if (!fontsLoaded) return null;
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <Stack screenOptions={{ headerShown: false, headerTitle: "Home" }}>
+      <Stack.Screen
+        name="Login/screens/LoginScreen"
+        options={{
+          headerShown: true,
+          headerTitle: "Login",
+        }}
+      />
+    </Stack>
+  );
 }
