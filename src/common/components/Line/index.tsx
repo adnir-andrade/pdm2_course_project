@@ -1,7 +1,8 @@
 import { Image } from "react-native";
+import Slim from "./Slim";
 import React from "react";
 
-export default function DecorativeLine() {
+export default function Line() {
   return (
     <Image
       source={require("../../../../assets/images/Decoration.png")}
@@ -10,3 +11,5 @@ export default function DecorativeLine() {
     />
   );
 }
+
+Line.Slim = Slim;
