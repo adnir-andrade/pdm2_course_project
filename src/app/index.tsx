@@ -1,24 +1,18 @@
-import { Text, View } from "react-native";
-import Button from "../common/components/Button";
+import { View } from "react-native";
+import Background from "../common/components/Background";
+import Watermark from "../common/components/Watermark";
+import LoginScreen from "../app/Login/screens/LoginScreen";
+import React from "react";
 
 export default function Home() {
-  const buttonFunction = () => {
-    console.log("click");
-  };
-
   return (
-    <>
-      <View className="flex-1 pt-36 bg-slate-900">
-        <View className="w-full h-36 flex items-center justify-center">
-          <Text className="py-11 text-themys-tussock text-8xl font-cinzel-decorative-bold text-shadow">
-            Themys
-          </Text>
-        </View>
-        <View className="self-center mt-20 gap-16">
-          <Button title="Sign In" onPress={buttonFunction} />
-          <Button title="Log In" onPress={buttonFunction} />
-        </View>
+    <Background>
+      <Watermark />
+      <View className="h-full justify-center items-center">
+        <Background.Transparent>
+          <LoginScreen />
+        </Background.Transparent>
       </View>
-    </>
+    </Background>
   );
 }
