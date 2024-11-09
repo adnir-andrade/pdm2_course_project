@@ -11,10 +11,7 @@ export default function Background({ children }: BackgroundProps) {
   const imagePath = require("../../../../assets/images/Background.png");
 
   return (
-    <ImageBackground
-      source={imagePath}
-      className="w-full h-full justify-center"
-    >
+    <ImageBackground source={imagePath} className="w-full h-full">
       {children}
     </ImageBackground>
   );
