@@ -39,6 +39,14 @@ export default function CampaignsContent() {
         keyExtractor={(item) => item.id.toString()}
         className="flex-1"
         showsVerticalScrollIndicator={false}
+        ListFooterComponent={() => (
+          <View className="mb-16">
+            <Button.Slim
+              title="New Campaign"
+              onPress={() => console.log(`Add Campaign`)}
+            />
+          </View>
+        )}
       />
     </View>
   );

@@ -98,6 +98,14 @@ export default function CharactersContent() {
         keyExtractor={(item) => item.id.toString()}
         className="flex-1"
         showsVerticalScrollIndicator={false}
+        ListFooterComponent={() => (
+          <View className="mb-16">
+            <Button.Slim
+              title="New Character"
+              onPress={() => console.log(`Add Character`)}
+            />
+          </View>
+        )}
       />
     </View>
   );
