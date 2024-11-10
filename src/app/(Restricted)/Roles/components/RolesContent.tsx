@@ -15,11 +15,11 @@ export default function RolesContent() {
       <View className="basis-4/6 justify-center items-center gap-20 w-full px-7 shrink">
         <Button
           title={"DM"}
-          path={"/(Restricted)/Campaigns/screens/CampaignsScreen"}
+          path={"/(Restricted)/_navigation/Drawer/Campaigns"}
         />
         <Button
           title={"Player"}
-          path={"/(Restricted)/Characters/screens/CharactersScreen"}
+          path={"/(Restricted)/_navigation/Drawer/Characters"}
         />
       </View>
       <View className="basis-1/6 justify-center items-center"></View>

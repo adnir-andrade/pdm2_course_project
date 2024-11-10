@@ -6,7 +6,7 @@ import Footer from "../../../../common/components/Footer";
 import CampaignsContent from "../components/CampaignsContent";
 import Text from "../../../../common/components/Text";
 
-export default function Campaigns() {
+export default function CampaignsScreen() {
   return (
     <Background>
       <Watermark />

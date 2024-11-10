@@ -15,7 +15,7 @@ export default function Button({ title, path }: ButtonProps) {
     "rounded-tl-[35] rounded-br-[35] rounded-bl-[15] rounded-tr-[15]";
 
   return (
-    <Link href={{ pathname: path }}>
+    <Link href={`/${path}`}>
       <View
         className={`w-248 h-[80] px-4 py-2 bg-themys-dune border border-themys-straw justify-center shadow-basic ${roundedBorders}`}
       >
