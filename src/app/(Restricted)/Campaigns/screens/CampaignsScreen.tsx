@@ -10,15 +10,17 @@ export default function Campaigns() {
   return (
     <Background>
       <Watermark />
-      <View className="h-full justify-center items-center">
-        <View className="w-full px-1">
+      <View className="flex-1 flex-col">
+        <View className="basis-[15%] w-full px-1 justify-center items-center">
           <Text.Title>Select a{"\n"}Campaign</Text.Title>
         </View>
-        <Background.Transparent>
-          <CampaignsContent />
-        </Background.Transparent>
+        <View className="items-center h-full max-h-[90%]">
+          <Background.Transparent>
+            <CampaignsContent />
+          </Background.Transparent>
+        </View>
+        <Footer />
       </View>
-      <Footer />
     </Background>
   );
 }
