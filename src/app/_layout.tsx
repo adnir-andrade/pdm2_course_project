@@ -16,6 +16,13 @@ export default function Layout() {
           headerTitle: "Login",
         }}
       />
+      <Stack.Screen
+        name="(Restricted)/Roles/screens/RolesScreen"
+        options={{
+          headerShown: true,
+          headerTitle: "Roles",
+        }}
+      />
     </Stack>
   );
 }
