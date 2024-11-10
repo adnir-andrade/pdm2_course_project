@@ -1,7 +1,7 @@
 import { FlatList, View } from "react-native";
 import React from "react";
 import { campaigns } from "../../../../mocks/MOCK_CAMPAIGN";
-import Text from "../../../../common/components/Text";
+import Button from "../../../../common/components/Button";
 
 type CampaignsData = {
   id: number;
@@ -12,32 +12,33 @@ type CampaignsData = {
 export default function CampaignsContent() {
   const formatDate = (date: Date): string => {
     const formattedDate = date.toLocaleDateString();
-    const dayAbbreviation = date.toLocaleDateString(undefined, {
-      weekday: "short",
-    });
+    const dayAbbreviation = date
+      .toLocaleDateString(undefined, {
+        weekday: "short",
+      })
+      .toUpperCase();
     return `${formattedDate}, ${dayAbbreviation}`;
   };
 
   const renderItem = ({ item }: { item: CampaignsData }) => (
-    <View className="p-4 border-b border-gray-300">
-      <Text
-        className="text-3xl font-cinzel-decorative-black text-themys-straw"
-        adjustsFontSizeToFit={true}
-        numberOfLines={1}
-      >
-        {item.name}
-      </Text>
-      <Text>{formatDate(item.next_session)}</Text>
+    <View className="mb-8 w-full">
+      <Button.Robust
+        title={item.name}
+        subtitle={formatDate(item.next_session)}
+        onPressMain={() => console.log(`Main click ${item.id}`)}
+        onPressOptions={() => console.log(`Options Click ${item.id}`)}
+      />
     </View>
   );
 
   return (
-    <View className="flex-1 px-7 pt-3">
+    <View className="flex-1 px-7 pt-10">
       <FlatList
         data={campaigns}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
         className="flex-1"
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );
