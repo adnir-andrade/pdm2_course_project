@@ -11,6 +11,7 @@ export default function Layout() {
 
   useEffect(() => {
     //TODO: When API is implemented, check if database token match
+    // TODO: Implement SecureStorage
     if (fontsLoaded && token) {
       router.replace("(Restricted)/");
     } else if (fontsLoaded) {
