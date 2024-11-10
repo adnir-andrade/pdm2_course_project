@@ -5,7 +5,7 @@ import Watermark from "../../../../common/components/Watermark";
 import RolesContent from "../components/RolesContent";
 import Footer from "../../../../common/components/Footer";
 
-export default function Roles() {
+export default function RolesScreen() {
   return (
     <Background>
       <Watermark />
