@@ -8,7 +8,7 @@ export default function Layout() {
   if (!fontsLoaded) return null;
 
   return (
-    <Stack screenOptions={{ headerShown: false, headerTitle: "Home" }}>
+    <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen
         name="Auth/screens/LoginScreen"
         options={{
