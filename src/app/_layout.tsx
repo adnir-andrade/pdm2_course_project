@@ -13,7 +13,7 @@ export default function Layout() {
     //TODO: When API is implemented, check if database token match
     // TODO: Implement SecureStorage
     if (fontsLoaded && token) {
-      router.replace("(Restricted)/");
+      router.replace("(Restricted)/_navigation/Drawer");
     } else if (fontsLoaded) {
       router.replace("/");
     }

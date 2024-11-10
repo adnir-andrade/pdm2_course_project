@@ -1,12 +1,12 @@
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Drawer } from "expo-router/drawer";
 
-export default function RestrictedLayout() {
+export default function _layout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer screenOptions={{ headerShown: false }}>
         <Drawer.Screen
-          name="Roles/index"
+          name="Roles"
           options={{
             headerShown: true,
             headerTitle: "Roles",
@@ -14,7 +14,7 @@ export default function RestrictedLayout() {
           }}
         />
         <Drawer.Screen
-          name="Campaigns/index"
+          name="Campaigns"
           options={{
             headerShown: true,
             headerTitle: "Campaigns",
@@ -22,7 +22,7 @@ export default function RestrictedLayout() {
           }}
         />
         <Drawer.Screen
-          name="Characters/index"
+          name="Characters"
           options={{
             headerShown: true,
             headerTitle: "Characters",
