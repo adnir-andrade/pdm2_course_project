@@ -7,8 +7,7 @@ import React from "react";
 import Line from "../../Line";
 
 type TextProps = {
-  children: string;
-  extraClass?: string;
+  children: string | string[];
 } & ReactTextProps;
 
 export default function Text({ children, ...rest }: TextProps) {
