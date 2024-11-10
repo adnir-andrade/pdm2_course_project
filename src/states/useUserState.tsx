@@ -14,7 +14,7 @@ const useUserState = create<State & Actions>((set) => ({
   username: "No Active User",
   token: null,
   login: (newUsername: string, token: string) => {
-    set({ username: newUsername, token });
+    set({ username: newUsername, token: token });
   },
   logout: () => {
     set({ username: "", token: null });
