@@ -6,7 +6,7 @@ import Button from "../../../common/components/Button";
 import { authenticateUser } from "../services/authService";
 import Footer from "./Footer";
 
-export default function LoginForm() {
+export default function LoginContent() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
