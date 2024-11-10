@@ -1,16 +1,16 @@
 import { View } from "react-native";
-import Background from "../common/components/Background";
-import Watermark from "../common/components/Watermark";
-import HomeScreen from "./Home/screens/HomeScreen";
 import React from "react";
+import Background from "../../../common/components/Background";
+import Watermark from "../../../common/components/Watermark";
+import LoginContent from "../components/LoginContent";
 
-export default function index() {
+export default function Login() {
   return (
     <Background>
       <Watermark />
       <View className="h-full justify-center items-center">
         <Background.Transparent>
-          <HomeScreen />
+          <LoginContent />
         </Background.Transparent>
       </View>
     </Background>

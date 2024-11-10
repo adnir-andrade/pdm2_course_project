@@ -1,16 +1,18 @@
-import { View, Text as ReactText } from 'react-native';
-import Title from './Title';
-import React from 'react';
+import { Text as ReactText, TextProps as ReactTextProps } from "react-native";
+import Title from "./Title";
+import Adorned from "./Adorned";
+import React from "react";
 
 type TextProps = {
   children: string;
   extraClass?: string;
-};
+} & ReactTextProps;
 
-export default function Text({ children, extraClass }: TextProps) {
+export default function Text({ children, ...rest }: TextProps) {
   return (
     <ReactText
-      className={`text-themys-soft-peach font-cinzel-medium text-lg ${extraClass}`}
+      className={`text-themys-soft-peach font-cinzel-medium text-lg`}
+      {...rest}
     >
       {children}
     </ReactText>
@@ -18,3 +20,4 @@ export default function Text({ children, extraClass }: TextProps) {
 }
 
 Text.Title = Title;
+Text.Adorned = Adorned;
