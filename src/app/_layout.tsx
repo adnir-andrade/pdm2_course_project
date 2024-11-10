@@ -23,6 +23,13 @@ export default function Layout() {
           headerTitle: "Roles",
         }}
       />
+      <Stack.Screen
+        name="(Restricted)/Campaigns/screens/CampaignsScreen"
+        options={{
+          headerShown: true,
+          headerTitle: "Campaigns",
+        }}
+      />
     </Stack>
   );
 }

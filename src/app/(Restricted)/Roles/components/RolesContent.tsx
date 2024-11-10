@@ -7,9 +7,9 @@ export default function RolesContent() {
     <View className="flex flex-col shrink">
       <View className="basis-1/6 justify-center items-center"></View>
       <View className="basis-4/6 justify-center items-center gap-20 w-full px-7 shrink">
-        <Button.Touchable
+        <Button
           title={"DM"}
-          onPress={() => console.log("DM Button touched")}
+          path={"/(Restricted)/Campaigns/screens/CampaignsScreen"}
         />
         <Button.Touchable
           title={"Player"}
