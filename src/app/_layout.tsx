@@ -30,6 +30,13 @@ export default function Layout() {
           headerTitle: "Campaigns",
         }}
       />
+      <Stack.Screen
+        name="(Restricted)/Characters/screens/CharactersScreen"
+        options={{
+          headerShown: true,
+          headerTitle: "Characters",
+        }}
+      />
     </Stack>
   );
 }
