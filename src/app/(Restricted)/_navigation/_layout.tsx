@@ -6,24 +6,27 @@ export default function RestrictedLayout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer screenOptions={{ headerShown: false }}>
         <Drawer.Screen
-          name="Roles/screens/RolesScreen"
+          name="Roles/index"
           options={{
+            headerShown: true,
             headerTitle: "Roles",
             drawerLabel: "Roles",
           }}
         />
         <Drawer.Screen
-          name="Campaigns"
+          name="Campaigns/index"
           options={{
             headerShown: true,
             headerTitle: "Campaigns",
+            drawerLabel: "Campaigns",
           }}
         />
         <Drawer.Screen
-          name="Characters"
+          name="Characters/index"
           options={{
             headerShown: true,
             headerTitle: "Characters",
+            drawerLabel: "Characters",
           }}
         />
       </Drawer>
