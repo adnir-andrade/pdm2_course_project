@@ -11,7 +11,9 @@ export default function Campaigns() {
     <Background>
       <Watermark />
       <View className="h-full justify-center items-center">
-        <Text.Title>Select a Campaign</Text.Title>
+        <View className="w-full px-1">
+          <Text.Title>Select a{"\n"}Campaign</Text.Title>
+        </View>
         <Background.Transparent>
           <CampaignsContent />
         </Background.Transparent>
