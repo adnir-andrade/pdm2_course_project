@@ -10,6 +10,11 @@ const checkPassword = (userPassword: string, inputPassword: string) => {
   return userPassword === inputPassword;
 };
 
+// TODO: To be removed once there is an API
+const generateRandomToken = () => {
+  return Math.random().toString(36);
+};
+
 export const authenticateUser = async (email: string, password: string) => {
   const user = findUserByEmail(email);
 
@@ -20,5 +25,12 @@ export const authenticateUser = async (email: string, password: string) => {
   if (!isPasswordCorrect)
     return { success: false, message: "Email not found!" };
 
-  return { success: true, message: "Log in successful" };
+  const token = generateRandomToken();
+
+  return {
+    success: true,
+    message: "Log in successful",
+    user: user,
+    token: token,
+  };
 };

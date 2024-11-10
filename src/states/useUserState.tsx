@@ -1,24 +1,24 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 type State = {
-    username: string;
+  username: string;
+  token: string | null;
 };
 
 type Actions = {
-    changeActiveUser: (newUsername: string) => void;
-    clear: () => void;
+  login: (newUsername: string, token: string) => void;
+  logout: () => void;
 };
 
-const useUserState = create<State & Actions>()((set) => ({
-    username: 'No Active User',
-    changeActiveUser: (newUsername: string) => {
-        set({ username: newUsername });
-    },
-    clear: () => {
-        set(() => ({
-            username: '',
-        }));
-    },
+const useUserState = create<State & Actions>((set) => ({
+  username: "No Active User",
+  token: null,
+  login: (newUsername: string, token: string) => {
+    set({ username: newUsername, token: token });
+  },
+  logout: () => {
+    set({ username: "", token: null });
+  },
 }));
 
 export default useUserState;
