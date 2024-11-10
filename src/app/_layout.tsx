@@ -6,17 +6,17 @@ import useUserState from "../states/useUserState";
 
 export default function Layout() {
   const fontsLoaded = useLoadFonts();
-  const { username, token } = useUserState();
+  const { token } = useUserState();
   const router = useRouter();
 
   useEffect(() => {
     //TODO: When API is implemented, check if database token match
     if (fontsLoaded && token) {
-      router.replace("(Restricted)/Roles/screens/RolesScreen");
+      router.replace("(Restricted)/");
     } else if (fontsLoaded) {
       router.replace("/");
     }
-  }, [fontsLoaded, username, router]);
+  }, [fontsLoaded, token, router]);
 
   if (!fontsLoaded) return null;
 
@@ -27,27 +27,6 @@ export default function Layout() {
         options={{
           headerShown: true,
           headerTitle: "Login",
-        }}
-      />
-      <Stack.Screen
-        name="(Restricted)/Roles/screens/RolesScreen"
-        options={{
-          headerShown: true,
-          headerTitle: "Roles",
-        }}
-      />
-      <Stack.Screen
-        name="(Restricted)/Campaigns/screens/CampaignsScreen"
-        options={{
-          headerShown: true,
-          headerTitle: "Campaigns",
-        }}
-      />
-      <Stack.Screen
-        name="(Restricted)/Characters/screens/CharactersScreen"
-        options={{
-          headerShown: true,
-          headerTitle: "Characters",
         }}
       />
     </Stack>
