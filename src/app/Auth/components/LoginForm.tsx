@@ -1,18 +1,22 @@
 import { Alert, View } from "react-native";
 import React, { useState } from "react";
-import Input from "../../../common/Input";
+import Input from "../../../common/components/Input";
 import Button from "../../../common/components/Button";
 import { authenticateUser } from "../services/authService";
+import { useRouter } from "expo-router";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const router = useRouter();
+
   const logInHandler = async () => {
     const { success, message } = await authenticateUser(email, password);
 
     if (success) {
-      console.log(message);
+      router.dismissAll();
+      router.replace("(Restricted)/Roles/screens/RolesScreen");
       return;
     }
 
