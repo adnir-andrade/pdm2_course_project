@@ -4,17 +4,24 @@ import Input from "../../../common/components/Input";
 import Button from "../../../common/components/Button";
 import { authenticateUser } from "../services/authService";
 import { useRouter } from "expo-router";
+import useUserState from "../../../states/useUserState";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { login } = useUserState();
 
   const router = useRouter();
 
   const logInHandler = async () => {
-    const { success, message } = await authenticateUser(email, password);
+    const { success, message, user, token } = await authenticateUser(
+      email,
+      password,
+    );
 
     if (success) {
+      console.log(`Login in user ${user!.username} with token ${token}`);
+      login(user!.username, token!);
       router.dismissAll();
       router.replace("(Restricted)/Roles/screens/RolesScreen");
       return;
