@@ -15,6 +15,7 @@ module.exports = {
       boxShadow: {
         basic: "0px 4px 4px rgba(0, 0, 0, 0.50)",
         input: "inset 5px 5px 4px rgba(59, 54, 52, 1)",
+        glow: "0 0 10px rgba(207, 190, 134, 1)",
       },
       textShadow: {
         sm: "inset 3px 4px 2px rgba(0 0 0 / 0.25)",
