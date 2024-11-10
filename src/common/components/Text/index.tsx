@@ -4,8 +4,7 @@ import Adorned from "./Adorned";
 import React from "react";
 
 type TextProps = {
-  children: string;
-  extraClass?: string;
+  children: string | string[];
 } & ReactTextProps;
 
 export default function Text({ children, ...rest }: TextProps) {

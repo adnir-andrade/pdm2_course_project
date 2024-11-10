@@ -782,6 +782,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/cinzel/-/cinzel-0.2.3.tgz#0fe277cc2c26e99ae3b5d647841f4bc587681dce"
   integrity sha512-fGSiWMAHJfXvkGQBJ2sWw6c0hSx2hgtMtN7cuFe6o6H/0nL4ttZG/SoEAJXQJU9YjMdduj/1uKkFm5CfRtorGw==
 
+"@expo-google-fonts/gowun-batang@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/gowun-batang/-/gowun-batang-0.2.3.tgz#a46fb7264bf686c303753764f465774b4a741d37"
+  integrity sha512-GJmtKkcZObG7ie/Tv35EnEXqqSAPj4G/lvzRkbC6y+bx3e6DzTbCYp1tB+/Skv6FShoptNU7ijp8KxagteEh8w==
+
 "@expo/bunyan@^4.0.0":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.1.tgz#ab9e17e36c71c704a0ce72168378a487368da736"
