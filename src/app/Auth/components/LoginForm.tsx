@@ -20,7 +20,6 @@ export default function LoginForm() {
     );
 
     if (success) {
-      console.log(`Login in user ${user!.username} with token ${token}`);
       login(user!.username, token!);
       router.dismissAll();
       router.replace("(Restricted)/Roles/screens/RolesScreen");
