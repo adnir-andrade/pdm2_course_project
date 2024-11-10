@@ -4,6 +4,7 @@ import Logo from "../../../common/components/Logo";
 import Input from "../../../common/Input";
 import Button from "../../../common/components/Button";
 import { authenticateUser } from "../services/authService";
+import Footer from "./Footer";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -45,6 +46,7 @@ export default function LoginForm() {
         </View>
       </View>
       <View className="basis-1/6 justify-center items-center"></View>
+        <Footer />
     </View>
   );
 }
