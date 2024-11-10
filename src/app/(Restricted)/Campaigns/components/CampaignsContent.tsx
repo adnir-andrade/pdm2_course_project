@@ -2,6 +2,7 @@ import { FlatList, View } from "react-native";
 import React from "react";
 import { campaigns } from "../../../../mocks/MOCK_CAMPAIGN";
 import Button from "../../../../common/components/Button";
+import { formatDate } from "../services/subtitleService";
 
 type CampaignsData = {
   id: number;
@@ -10,16 +11,6 @@ type CampaignsData = {
 };
 
 export default function CampaignsContent() {
-  const formatDate = (date: Date): string => {
-    const formattedDate = date.toLocaleDateString();
-    const dayAbbreviation = date
-      .toLocaleDateString(undefined, {
-        weekday: "short",
-      })
-      .toUpperCase();
-    return `${formattedDate}, ${dayAbbreviation}`;
-  };
-
   const renderItem = ({ item }: { item: CampaignsData }) => (
     <View className="mb-8 w-full">
       <Button.Robust
