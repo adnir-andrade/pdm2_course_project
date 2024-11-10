@@ -41,6 +41,8 @@ module.exports = {
         "cinzel-decorative-regular": ["CinzelDecorative_400Regular"],
         "cinzel-decorative-bold": ["CinzelDecorative_700Bold"],
         "cinzel-decorative-black": ["CinzelDecorative_900Black"],
+        "gowun-regular": ["GowunBatang_400Regular"],
+        "gowun-bold": ["GowunBatang_700Bold"],
       },
     },
   },

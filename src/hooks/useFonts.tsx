@@ -14,6 +14,10 @@ import {
   CinzelDecorative_700Bold,
   CinzelDecorative_900Black,
 } from "@expo-google-fonts/cinzel-decorative";
+import {
+  GowunBatang_400Regular,
+  GowunBatang_700Bold,
+} from "@expo-google-fonts/gowun-batang";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -28,6 +32,8 @@ export default function useLoadFonts() {
     CinzelDecorative_400Regular,
     CinzelDecorative_700Bold,
     CinzelDecorative_900Black,
+    GowunBatang_400Regular,
+    GowunBatang_700Bold,
   });
 
   useEffect(() => {
