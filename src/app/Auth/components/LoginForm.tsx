@@ -22,11 +22,11 @@ export default function LoginForm() {
   };
 
   return (
-    <View className="flex flex-col">
+    <View className="flex flex-col shrink">
       <View className="basis-1/6 justify-center items-center">
         <Logo />
       </View>
-      <View className="basis-4/6 justify-center items-center gap-10 w-full px-7">
+      <View className="basis-4/6 justify-center items-center gap-10 w-full px-7 shrink">
         <Input
           label="E-mail"
           textContentType={"emailAddress"}
@@ -41,12 +41,13 @@ export default function LoginForm() {
           value={password}
           onChangeText={setPassword}
         />
-        <View className="w-full mt-24">
+        <View className="w-full mt-12">
           <Button.Slim title="LOG IN" onPress={logInHandler} />
         </View>
       </View>
-      <View className="basis-1/6 justify-center items-center"></View>
+      <View className="basis-1/6 justify-center items-center">
         <Footer />
+      </View>
     </View>
   );
 }
