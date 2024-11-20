@@ -11,7 +11,7 @@ type ButtonProps = {
 export default function Button({ title, onPress }: ButtonProps) {
   return (
     <TouchableOpacity className={`button`} onPress={onPress}>
-      <Text className="text-center text-themys-straw text-4xl font-cinzel-decorative-bold -bottom-1 text-shadow-lg">
+      <Text className="text-decorated text-center text-4xl -bottom-1">
         {title}
       </Text>
     </TouchableOpacity>

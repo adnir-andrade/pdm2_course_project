@@ -7,7 +7,7 @@ type TitleProps = {
 export default function Title({ title }: TitleProps) {
   return (
     <Text
-      className="text-2xl pl-2 font-cinzel-decorative-black text-themys-straw"
+      className="text-decorated text-2xl pl-2"
       adjustsFontSizeToFit={true}
       lineBreakMode={"tail"}
       numberOfLines={2}

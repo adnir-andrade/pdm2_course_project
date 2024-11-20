@@ -31,3 +31,16 @@
 .button-robust {
     @apply button-base rounded-robust h-[70] py-3 pl-5 pr-16;
 }
+
+/* Texts variants */
+.text {
+    @apply text-center;
+}
+
+.text-decorated {
+    @apply text-themys-straw font-cinzel-decorative-bold text-shadow-lg
+}
+
+.text-simple {
+    @apply font-gowun-regular text-themys-soft-peach
+}

@@ -25,9 +25,7 @@ export default function Button({
         <View className="w-full h-[0.4] pr-36">
           <Line.Slim />
         </View>
-        <Text className="font-gowun-regular text-themys-soft-peach">
-          {subtitle}
-        </Text>
+        <Text className="text-simple">{subtitle}</Text>
       </TouchableOpacity>
       <OptionsButton onPress={onPressOptions} />
     </>
