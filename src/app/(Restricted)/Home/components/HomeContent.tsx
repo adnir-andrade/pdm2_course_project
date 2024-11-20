@@ -13,8 +13,8 @@ export default function HomeContent() {
         <Text.Adorned>{username}</Text.Adorned>
       </View>
       <View className="basis-4/6 justify-center items-center gap-20 w-full px-7 shrink">
-        <Button title={"DM"} path={"_navigation/DM/Campaigns"} />
-        <Button title={"Player"} path={"_navigation/Player/Characters"} />
+        <Button title={"DM"} path={"_navigation/DM"} />
+        <Button title={"Player"} path={"_navigation/Player"} />
       </View>
       <View className="basis-1/6 justify-center items-center"></View>
     </View>

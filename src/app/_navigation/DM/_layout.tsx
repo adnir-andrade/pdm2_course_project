@@ -4,7 +4,7 @@ export default function DmLayout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen
-        name="Campaigns"
+        name="index"
         options={{
           headerTitle: "Campaigns",
         }}
