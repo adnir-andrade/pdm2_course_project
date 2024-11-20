@@ -7,7 +7,7 @@ export default function Watermark() {
   return (
     <ImageBackground
       source={logoPath}
-      className="w-full h-full mix-blend-soft-light absolute opacity-40 -top-8"
+      className="w-full h-full absolute opacity-40 -top-8"
       resizeMode={"cover"}
     />
   );

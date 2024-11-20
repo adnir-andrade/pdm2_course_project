@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-themys {
+    @apply bg-themys-dune border-themys-straw border shadow-basic
+}
+
+.button-base {
+    @apply w-full bg-themys;
+}
+
+/* Border classes */
+.rounded-card {
+    @apply rounded-t-[20] rounded-b-[10];
+}
+
+.rounded-slim {
+    @apply rounded-tl-2xl rounded-br-2xl rounded-bl-[7px] rounded-tr-[7px];
+}
+
+.rounded-robust {
+    @apply rounded-tl-[30px] rounded-br-[30px] rounded-bl-[15px] rounded-tr-[15px];
+}
+
+.rounded-default {
+    @apply rounded-tl-[35px] rounded-br-[35px] rounded-bl-[15px] rounded-tr-[15px];
+}
+
+/* Buttons variants */
+.button {
+    @apply button-base rounded-default h-[80] px-4 py-2 justify-center;
+}
+
+.button-slim {
+    @apply button-base border-[0.5px] rounded-slim h-[46] px-4 py-2 justify-center;
+}
+
+.button-robust {
+    @apply button-base rounded-robust h-[70] py-3 pl-5 pr-16;
+}
+
+/* Texts variants */
+.text {
+    @apply font-cinzel-bold text-themys-straw;
+}
+
+.text-decorated {
+    @apply text-themys-straw font-cinzel-decorative-bold text-shadow-lg
+}
+
+.text-simple {
+    @apply font-gowun-regular text-themys-soft-peach
+}

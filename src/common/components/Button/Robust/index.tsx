@@ -18,22 +18,14 @@ export default function Button({
   onPressMain,
   onPressOptions,
 }: ButtonProps) {
-  const roundedBorders =
-    "rounded-tl-[30] rounded-br-[30] rounded-bl-[15] rounded-tr-[15]";
-
   return (
     <>
-      <TouchableOpacity
-        className={`w-full h-[70] py-3 pl-5 pr-16 bg-themys-dune border border-themys-straw shadow-basic ${roundedBorders}`}
-        onPress={onPressMain}
-      >
+      <TouchableOpacity className={`button-robust`} onPress={onPressMain}>
         <Title title={title} />
         <View className="w-full h-[0.4] pr-36">
           <Line.Slim />
         </View>
-        <Text className="font-gowun-regular text-themys-soft-peach">
-          {subtitle}
-        </Text>
+        <Text className="text-simple">{subtitle}</Text>
       </TouchableOpacity>
       <OptionsButton onPress={onPressOptions} />
     </>

@@ -16,7 +16,7 @@ export default function Text({ children, ...rest }: TextProps) {
       <Line />
       <View className="basis-[60%]">
         <ReactText
-          className={`mx-4 font-cinzel-bold text-themys-straw text-4xl text-center text-shadow-lg`}
+          className={`text mx-4 text-4xl text-center text-shadow-lg`}
           adjustsFontSizeToFit={true}
           numberOfLines={2}
           {...rest}

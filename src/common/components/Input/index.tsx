@@ -20,7 +20,7 @@ export default function Input({
 
   return (
     <View
-      className={`w-full h-[46] px-4 py-2 bg-themys-dune justify-center rounded border border-themys-straw shadow-input`}
+      className={`w-full bg-themys h-[46] px-4 py-2 justify-center rounded shadow-input`}
     >
       <TextInput
         value={value}

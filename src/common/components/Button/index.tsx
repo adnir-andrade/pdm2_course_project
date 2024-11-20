@@ -1,32 +1,22 @@
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 import React from "react";
-import Touchable from "./Touchable";
 import Slim from "./Slim";
 import Robust from "./Robust";
-import { Link } from "expo-router";
 
 type ButtonProps = {
   title: string;
-  path: string;
-};
+  onPress: () => void;
+} & TouchableOpacityProps;
 
-export default function Button({ title, path }: ButtonProps) {
-  const roundedBorders =
-    "rounded-tl-[35] rounded-br-[35] rounded-bl-[15] rounded-tr-[15]";
-
+export default function Button({ title, onPress }: ButtonProps) {
   return (
-    <Link href={`/${path}`}>
-      <View
-        className={`w-248 h-[80] px-4 py-2 bg-themys-dune border border-themys-straw justify-center shadow-basic ${roundedBorders}`}
-      >
-        <Text className="text-center text-themys-straw text-4xl font-cinzel-decorative-bold -bottom-1 text-shadow-sm">
-          {title}
-        </Text>
-      </View>
-    </Link>
+    <TouchableOpacity className={`button`} onPress={onPress}>
+      <Text className="text-decorated text-center text-4xl -bottom-1">
+        {title}
+      </Text>
+    </TouchableOpacity>
   );
 }
 
-Button.Touchable = Touchable;
 Button.Slim = Slim;
 Button.Robust = Robust;
