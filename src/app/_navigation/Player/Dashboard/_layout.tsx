@@ -29,6 +29,30 @@ export default function DashboardLayout() {
             drawerLabel: "Journal",
           }}
         />
+        <Drawer.Screen
+          name="CharacterSelection"
+          options={{
+            drawerLabel: "Character Selection",
+            headerShown: false,
+            drawerLabelStyle: { fontWeight: "bold" },
+          }}
+        />
+        <Drawer.Screen
+          name="CampaignSelection"
+          options={{
+            drawerLabel: "Campaign Selection",
+            headerShown: false,
+            drawerLabelStyle: { fontWeight: "bold" },
+          }}
+        />
+        <Drawer.Screen
+          name="Home"
+          options={{
+            drawerLabel: "Home",
+            headerShown: false,
+            drawerLabelStyle: { fontWeight: "bold" },
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
   );
