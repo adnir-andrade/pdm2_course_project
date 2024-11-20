@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import Button from "../../../../common/components/Button";
+import Button from "../../../../../common/components/Button";
 import { formatDate } from "../services/subtitleService";
 
 type CampaignData = {

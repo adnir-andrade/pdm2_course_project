@@ -1,6 +1,6 @@
 import { FlatList } from "react-native";
 import React from "react";
-import { campaigns } from "../../../../mocks/MOCK_CAMPAIGN";
+import { campaigns } from "../../../../../mocks/MOCK_CAMPAIGN";
 import AddCampaign from "./AddCampaign";
 import { CampaignItem } from "./CampaignItem";
 
