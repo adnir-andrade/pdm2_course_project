@@ -1,35 +1,29 @@
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { Drawer } from "expo-router/drawer";
+import { Stack } from "expo-router";
 
-export default function _layout() {
+export default function RestrictedLayout() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <Drawer screenOptions={{ headerShown: false }}>
-        <Drawer.Screen
-          name="index"
-          options={{
-            headerShown: true,
-            headerTitle: "Home",
-            drawerLabel: "Home",
-          }}
-        />
-        <Drawer.Screen
-          name="DM"
-          options={{
-            headerShown: true,
-            headerTitle: "Campaigns",
-            drawerLabel: "Campaigns",
-          }}
-        />
-        <Drawer.Screen
-          name="Player"
-          options={{
-            headerShown: true,
-            headerTitle: "Characters",
-            drawerLabel: "Characters",
-          }}
-        />
-      </Drawer>
-    </GestureHandlerRootView>
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen
+        name="index"
+        options={{
+          headerShown: true,
+          headerTitle: "Home",
+        }}
+      />
+      <Stack.Screen
+        name="DM"
+        options={{
+          headerShown: true,
+          headerTitle: "Campaigns",
+        }}
+      />
+      <Stack.Screen
+        name="Player"
+        options={{
+          headerShown: true,
+          headerTitle: "Characters",
+        }}
+      />
+    </Stack>
   );
 }
