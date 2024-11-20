@@ -4,7 +4,7 @@ import Button from "../../../../common/components/Button";
 import Text from "../../../../common/components/Text";
 import useUserState from "../../../../states/useUserState";
 
-export default function RolesContent() {
+export default function HomeContent() {
   const { username } = useUserState();
 
   return (

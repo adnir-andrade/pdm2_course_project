@@ -6,11 +6,11 @@ export default function _layout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer screenOptions={{ headerShown: false }}>
         <Drawer.Screen
-          name="Roles"
+          name="index"
           options={{
             headerShown: true,
-            headerTitle: "Roles",
-            drawerLabel: "Roles",
+            headerTitle: "Home",
+            drawerLabel: "Home",
           }}
         />
         <Drawer.Screen
