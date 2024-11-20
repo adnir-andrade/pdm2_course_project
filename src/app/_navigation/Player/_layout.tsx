@@ -4,7 +4,7 @@ export default function PlayerLayout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen
-        name="Characters"
+        name="index"
         options={{
           headerTitle: "Characters",
         }}
