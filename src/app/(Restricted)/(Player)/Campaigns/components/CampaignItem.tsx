@@ -19,7 +19,7 @@ export const CampaignItem = ({ item }: CampaignItemProps) => {
 
   const mainButtonHandler = (id: number) => {
     console.log(`Main click ${id}`);
-    router.push("./Player/Characters");
+    router.push("_navigation/Player/Characters");
   };
 
   return (
