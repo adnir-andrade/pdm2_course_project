@@ -22,8 +22,8 @@ export default function HomeContent() {
         <Logo />
       </View>
       <View className="w-5/6 basis-4/6 justify-center items-center self-center gap-10">
-        <Button.Touchable title="Sign In" onPress={signInHandler} />
-        <Button.Touchable title="Log In" onPress={logInHandler} />
+        <Button title="Sign In" onPress={signInHandler} />
+        <Button title="Log In" onPress={logInHandler} />
       </View>
       <View className="basis-1/6 justify-center items-center gap-3">
         <Footer />

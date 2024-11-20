@@ -1,6 +1,5 @@
 import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 import React from "react";
-import Touchable from "./Touchable";
 import Slim from "./Slim";
 import Robust from "./Robust";
 
@@ -25,6 +24,5 @@ export default function Button({ title, onPress }: ButtonProps) {
   );
 }
 
-Button.Touchable = Touchable;
 Button.Slim = Slim;
 Button.Robust = Robust;

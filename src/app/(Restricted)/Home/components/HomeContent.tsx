@@ -24,8 +24,8 @@ export default function HomeContent() {
         <Text.Adorned>{username}</Text.Adorned>
       </View>
       <View className="basis-4/6 justify-center items-center gap-20 w-full px-7 shrink">
-        <Button.Touchable title={"DM"} onPress={dmHandler} />
-        <Button.Touchable title={"Player"} onPress={playerHandler} />
+        <Button title={"DM"} onPress={dmHandler} />
+        <Button title={"Player"} onPress={playerHandler} />
       </View>
       <View className="basis-1/6 justify-center items-center"></View>
     </View>
