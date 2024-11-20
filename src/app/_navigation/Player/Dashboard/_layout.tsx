@@ -53,6 +53,14 @@ export default function DashboardLayout() {
             drawerLabelStyle: { fontWeight: "bold" },
           }}
         />
+        <Drawer.Screen
+          name="LogOut"
+          options={{
+            drawerLabel: "Log Out",
+            headerShown: false,
+            drawerLabelStyle: { fontWeight: "bold" },
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
   );
