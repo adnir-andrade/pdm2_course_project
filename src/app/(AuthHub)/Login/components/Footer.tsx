@@ -1,5 +1,5 @@
-import Text from "../../../common/components/Text";
-import TouchableIcon from "../../../common/components/TouchableIcon";
+import Text from "../../../../common/components/Text";
+import TouchableIcon from "../../../../common/components/TouchableIcon";
 import React from "react";
 
 export default function Footer() {

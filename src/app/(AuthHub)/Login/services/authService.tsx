@@ -1,4 +1,4 @@
-import { users } from "../../../mocks/MOCK_USER";
+import { users } from "../../../../mocks/MOCK_USER";
 
 // TODO: Refactor everything after implementing an API
 const findUserByEmail = (email: string) => {

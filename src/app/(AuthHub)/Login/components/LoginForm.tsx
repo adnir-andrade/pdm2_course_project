@@ -1,10 +1,10 @@
 import { Alert, View } from "react-native";
 import React, { useState } from "react";
-import Input from "../../../common/components/Input";
-import Button from "../../../common/components/Button";
+import Input from "../../../../common/components/Input";
+import Button from "../../../../common/components/Button";
 import { authenticateUser } from "../services/authService";
 import { useRouter } from "expo-router";
-import useUserState from "../../../states/useUserState";
+import useUserState from "../../../../states/useUserState";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
