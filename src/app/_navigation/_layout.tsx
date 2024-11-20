@@ -6,7 +6,6 @@ export default function RestrictedLayout() {
       <Stack.Screen
         name="index"
         options={{
-          headerShown: true,
           headerTitle: "Home",
         }}
       />
