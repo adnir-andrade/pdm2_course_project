@@ -5,6 +5,7 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
+    router.dismissAll();
     router.replace("/_navigation/");
   }, [router]);
 
