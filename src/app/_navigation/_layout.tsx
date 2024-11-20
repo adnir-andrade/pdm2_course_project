@@ -4,8 +4,8 @@ import { Text, View } from "react-native";
 export default function RestrictedLayout() {
   const routeNames: { [key: string]: string } = {
     index: "Home",
-    DM: "Campaigns",
-    Player: "Campaigns",
+    DM: "DM",
+    Player: "Player",
   };
 
   return (
