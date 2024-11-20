@@ -22,7 +22,7 @@ export default function LoginForm() {
     if (success) {
       login(user!.username, token!);
       router.dismissAll();
-      router.replace("(Restricted)/_navigation/Drawer");
+      router.replace("_navigation/");
       return;
     }
 
