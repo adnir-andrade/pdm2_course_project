@@ -3,7 +3,7 @@ import React from "react";
 import Background from "../../../../../common/components/Background";
 import Watermark from "../../../../../common/components/Watermark";
 import Footer from "../../../../../common/components/Footer";
-import CampaignsContent from "../components/CharactersContent";
+import CharactersContent from "../components/CharactersContent";
 import Text from "../../../../../common/components/Text";
 
 export default function CharactersScreen() {
@@ -16,7 +16,7 @@ export default function CharactersScreen() {
         </View>
         <View className="items-center h-full max-h-[90%]">
           <Background.Transparent>
-            <CampaignsContent />
+            <CharactersContent />
           </Background.Transparent>
         </View>
         <Footer />
