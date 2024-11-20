@@ -13,7 +13,7 @@ export default function Layout() {
     //TODO: When API is implemented, check if database token match
     // TODO: Implement SecureStorage
     if (fontsLoaded && token) {
-      router.replace("(Restricted)/_navigation/Drawer");
+      router.replace("_navigation/");
     } else if (fontsLoaded) {
       router.replace("/");
     }
@@ -24,7 +24,7 @@ export default function Layout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen
-        name="Auth/screens/LoginScreen"
+        name="(AuthHub)/Login/screens/LoginScreen"
         options={{
           headerShown: true,
           headerTitle: "Login",
