@@ -24,7 +24,7 @@ export default function Layout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen
-        name="Auth/screens/LoginScreen"
+        name="(AuthHub)/Login/screens/LoginScreen"
         options={{
           headerShown: true,
           headerTitle: "Login",
