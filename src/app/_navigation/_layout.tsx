@@ -1,28 +1,29 @@
-import { Stack } from "expo-router";
+import { Tabs } from "expo-router";
 
 export default function RestrictedLayout() {
   return (
-    <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen
-        name="index"
-        options={{
-          headerTitle: "Home",
-        }}
-      />
-      <Stack.Screen
+    <Tabs screenOptions={{ headerShown: false }}>
+      <Tabs.Screen
         name="DM"
         options={{
           headerShown: true,
           headerTitle: "Campaigns",
         }}
       />
-      <Stack.Screen
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          headerTitle: "Home",
+        }}
+      />
+      <Tabs.Screen
         name="Player"
         options={{
           headerShown: true,
           headerTitle: "Characters",
         }}
       />
-    </Stack>
+    </Tabs>
   );
 }
