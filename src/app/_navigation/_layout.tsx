@@ -20,7 +20,7 @@ export default function RestrictedLayout() {
           borderColor: "#cfbe86",
           shadowColor: "#cfbe86",
           shadowOpacity: 0.4,
-          height: 60,
+          height: 80,
           borderTopWidth: 0,
           elevation: 0,
         },

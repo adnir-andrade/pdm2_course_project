@@ -3,7 +3,6 @@ import React from "react";
 import Background from "../../../../common/components/Background";
 import Watermark from "../../../../common/components/Watermark";
 import HomeContent from "../components/HomeContent";
-import Footer from "../../../../common/components/Footer";
 
 export default function HomeScreen() {
   return (
@@ -14,7 +13,6 @@ export default function HomeScreen() {
           <HomeContent />
         </Background.Transparent>
       </View>
-      <Footer />
     </Background>
   );
 }
