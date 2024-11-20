@@ -6,7 +6,6 @@ export default function RestrictedLayout() {
       <Tabs.Screen
         name="DM"
         options={{
-          headerShown: true,
           headerTitle: "Campaigns",
         }}
       />
@@ -20,7 +19,6 @@ export default function RestrictedLayout() {
       <Tabs.Screen
         name="Player"
         options={{
-          headerShown: true,
           headerTitle: "Campaigns",
         }}
       />

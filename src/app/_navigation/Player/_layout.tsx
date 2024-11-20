@@ -13,6 +13,7 @@ export default function PlayerLayout() {
         name="Characters"
         options={{
           headerTitle: "Characters",
+          headerShown: true,
         }}
       />
     </Stack>
