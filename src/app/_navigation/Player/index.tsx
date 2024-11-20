@@ -1,6 +1,6 @@
 import React from "react";
-import CharactersScreen from "../../(Restricted)/(Player)/Characters/screens/CharactersScreen";
+import CampaignsScreen from "../../(Restricted)/(Player)/Campaigns/screens/CampaignsScreen";
 
 export default function PlayerIndex() {
-  return <CharactersScreen />;
+  return <CampaignsScreen />;
 }

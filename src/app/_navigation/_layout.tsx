@@ -21,7 +21,7 @@ export default function RestrictedLayout() {
         name="Player"
         options={{
           headerShown: true,
-          headerTitle: "Characters",
+          headerTitle: "Campaigns",
         }}
       />
     </Tabs>

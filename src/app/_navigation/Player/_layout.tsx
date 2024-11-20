@@ -6,6 +6,12 @@ export default function PlayerLayout() {
       <Stack.Screen
         name="index"
         options={{
+          headerTitle: "Campaigns",
+        }}
+      />
+      <Stack.Screen
+        name="Characters"
+        options={{
           headerTitle: "Characters",
         }}
       />
