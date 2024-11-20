@@ -1,18 +1,14 @@
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { Drawer } from "expo-router/drawer";
+import { Stack } from "expo-router";
 
 export default function PlayerLayout() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <Drawer screenOptions={{ headerShown: false }}>
-        <Drawer.Screen
-          name="index"
-          options={{
-            headerTitle: "Characters",
-            drawerLabel: "Characters",
-          }}
-        />
-      </Drawer>
-    </GestureHandlerRootView>
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen
+        name="Characters"
+        options={{
+          headerTitle: "Characters",
+        }}
+      />
+    </Stack>
   );
 }
