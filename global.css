@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button-base {
+    @apply w-full bg-themys-dune border border-themys-straw shadow-basic;
+}
+
+/* Border classes */
+.rounded-slim {
+    @apply rounded-tl-2xl rounded-br-2xl rounded-bl-[7px] rounded-tr-[7px];
+}
+
+.rounded-robust {
+    @apply rounded-tl-[30px] rounded-br-[30px] rounded-bl-[15px] rounded-tr-[15px];
+}
+
+.rounded-default {
+    @apply rounded-tl-[35px] rounded-br-[35px] rounded-bl-[15px] rounded-tr-[15px];
+}
+
+/* Buttons variants */
+.button {
+    @apply button-base rounded-default h-[80] px-4 py-2 justify-center;
+}
+
+.button-slim {
+    @apply button-base border-[0.5px] rounded-slim h-[46] px-4 py-2 justify-center;
+}
+
+.button-robust {
+    @apply button-base rounded-robust h-[70] py-3 pl-5 pr-16;
+}
