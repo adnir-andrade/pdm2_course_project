@@ -1,5 +1,5 @@
 import React from "react";
-import CampaignsScreen from "../../Campaigns/screens/CampaignsScreen";
+import CampaignsScreen from "../../(Restricted)/Campaigns/screens/CampaignsScreen";
 
 export default function Campaigns() {
   return <CampaignsScreen />;

@@ -1,5 +1,5 @@
 import React from "react";
-import RolesScreen from "../../Roles/screens/RolesScreen";
+import RolesScreen from "../(Restricted)/Roles/screens/RolesScreen";
 
 export default function Roles() {
   return <RolesScreen />;

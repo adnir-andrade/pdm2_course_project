@@ -1,5 +1,5 @@
 import React from "react";
-import CharactersScreen from "../../Characters/screens/CharactersScreen";
+import CharactersScreen from "../../(Restricted)/Characters/screens/CharactersScreen";
 
 export default function Characters() {
   return <CharactersScreen />;

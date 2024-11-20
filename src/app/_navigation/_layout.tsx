@@ -14,7 +14,7 @@ export default function _layout() {
           }}
         />
         <Drawer.Screen
-          name="Campaigns"
+          name="DM"
           options={{
             headerShown: true,
             headerTitle: "Campaigns",
@@ -22,7 +22,7 @@ export default function _layout() {
           }}
         />
         <Drawer.Screen
-          name="Characters"
+          name="Player"
           options={{
             headerShown: true,
             headerTitle: "Characters",
