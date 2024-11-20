@@ -42,7 +42,7 @@
 
 /* Texts variants */
 .text {
-    @apply text-center;
+    @apply font-cinzel-bold text-themys-straw;
 }
 
 .text-decorated {

@@ -14,10 +14,7 @@ export default function Text({ children, ...rest }: TextProps) {
   return (
     <View className="flex-row items-center justify-center mx-6">
       <Line.Slim />
-      <ReactText
-        className={`mx-4 font-cinzel-bold text-themys-straw text-2xl`}
-        {...rest}
-      >
+      <ReactText className={`text mx-4 text-2xl`} {...rest}>
         {children}
       </ReactText>
       <Line.Slim />
