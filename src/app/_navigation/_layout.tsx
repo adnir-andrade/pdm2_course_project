@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import { Text, View } from "react-native";
+import TabBarIcon from "../../common/components/Tabs/TabBarIcon";
 
 export default function RestrictedLayout() {
   const routeNames: { [key: string]: string } = {
@@ -26,21 +26,7 @@ export default function RestrictedLayout() {
         },
         tabBarIcon: ({ focused }) => {
           const routeName = routeNames[route.name] || route.name;
-
-          const shadowStyle = focused ? "shadow-lg" : "";
-          return (
-            <View
-              className={`${shadowStyle} h-full w-full justify-center items-center`}
-            >
-              {/*TODO: Add icon depending on tab name. Gotta create a object for that probably*/}
-              {/*<Icon name={} />*/}
-              <Text
-                className={`text ${focused ? "text-[#c29f41] text-xl" : "text-[#cfbe86]"}`}
-              >
-                {routeName}
-              </Text>
-            </View>
-          );
+          return <TabBarIcon routeName={routeName} focused={focused} />;
         },
       })}
     >
