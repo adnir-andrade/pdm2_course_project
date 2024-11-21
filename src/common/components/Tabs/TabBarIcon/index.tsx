@@ -7,16 +7,16 @@ type CustomTabProps = {
   focused: boolean;
 };
 
+const getIcon = (routeName: string): string => {
+  if (routeName === "DM") return "hood";
+  if (routeName === "Home") return "campfire";
+  if (routeName === "Player") return "helmet";
+
+  return "perspective-dice-random";
+};
+
 export default function TabBarIcon({ routeName, focused }: CustomTabProps) {
   const chosenColor = focused ? "#c29f41" : "#cfbe86";
-
-  const getIcon = (routeName: string): string => {
-    if (routeName === "DM") return "hood";
-    if (routeName === "Home") return "campfire";
-    if (routeName === "Player") return "helmet";
-
-    return "perspective-dice-random";
-  };
 
   return (
     <View
