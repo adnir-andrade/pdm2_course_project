@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { TouchableOpacity } from "react-native";
 import SideBarIcon from "./SideBarIcon";
 import SideBarLabel from "./SideBarLabel";
 
@@ -19,8 +19,11 @@ export default function SideBarButton({
   const buttonBg = isActive ? "bg-themys-dune/50" : "bg-themys-dune/25";
 
   return (
-    <View
+    <TouchableOpacity
       className={`flex flex-row h-20 justify-center border-sidebar ${buttonBg}`}
+      onPress={() => {
+        console.log("Clicked!");
+      }}
     >
       <SideBarIcon
         className={`basis-[20%] ${isActive && "shadow-glow-sm"} centralized`}
@@ -31,6 +34,6 @@ export default function SideBarButton({
         className={`basis-[80%] ${isActive && "shadow-glow-sm"} justify-center px-4`}
         label={label}
       />
-    </View>
+    </TouchableOpacity>
   );
 }
