@@ -31,6 +31,10 @@
     @apply border-2 bg-themys shadow-glow-lg rounded-full aspect-square
 }
 
+.border-sidebar {
+    @apply border-r-2 border-themys-cod-gray
+}
+
 /* Buttons variants */
 .button {
     @apply button-base rounded-default h-[80] px-4 py-2 justify-center;
