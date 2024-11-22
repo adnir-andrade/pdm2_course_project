@@ -18,6 +18,7 @@ module.exports = {
         contrast: "3px 2px 2px rgba(0, 0, 0, 0.7)",
         glow: "0 0 10px rgba(207, 190, 134, 1)",
         "glow-lg": "0 0 12.5px rgba(195, 156, 65, 0.65)",
+        "glow-sm": "0 0 4px rgba(195, 156, 65, 1)",
       },
       textShadow: {
         sm: "inset 3px 4px 2px rgba(0 0 0 / 0.25)",
