@@ -1,10 +1,19 @@
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Drawer } from "expo-router/drawer";
+import SideBar from "../../../../common/components/Drawer/SideBar";
 
 export default function DashboardLayout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <Drawer screenOptions={{ headerShown: false }}>
+      <Drawer
+        drawerContent={(props) => <SideBar {...props} />}
+        screenOptions={{
+          headerShown: false,
+          drawerStyle: {
+            backgroundColor: "#transparent",
+          },
+        }}
+      >
         <Drawer.Screen
           name="index"
           options={{
