@@ -5,10 +5,17 @@ import SideBarLabel from "./SideBarLabel";
 
 type SideBarButtonProps = {
   label: string;
-  isActive: boolean;
+  iconColor?: ColorType;
+  isActive?: boolean;
 };
 
-export default function SideBarButton({ label, isActive }: SideBarButtonProps) {
+type ColorType = "normal" | "golden" | "red";
+
+export default function SideBarButton({
+  label,
+  iconColor = "normal",
+  isActive = false,
+}: SideBarButtonProps) {
   const buttonBg = isActive ? "bg-themys-dune/50" : "bg-themys-dune/25";
 
   return (
@@ -18,7 +25,7 @@ export default function SideBarButton({ label, isActive }: SideBarButtonProps) {
       <SideBarIcon
         className={`basis-[20%] ${isActive && "shadow-glow-sm"} centralized`}
         label={label}
-        color={"normal"}
+        color={iconColor}
       />
       <SideBarLabel
         className={`basis-[80%] ${isActive && "shadow-glow-sm"} justify-center px-4`}
