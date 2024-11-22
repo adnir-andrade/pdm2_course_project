@@ -20,14 +20,14 @@ export default function HomeContent() {
 
   return (
     <View className="flex flex-col shrink">
-      <View className="basis-1/6 justify-center items-center">
+      <View className="basis-1/6 centralized">
         <Text.Adorned>{username}</Text.Adorned>
       </View>
-      <View className="basis-4/6 justify-center items-center gap-20 w-full px-7 shrink">
+      <View className="basis-4/6 centralized gap-20 w-full px-7 shrink">
         <Button title={"DM"} onPress={dmHandler} />
         <Button title={"Player"} onPress={playerHandler} />
       </View>
-      <View className="basis-1/6 justify-center items-center"></View>
+      <View className="basis-1/6 centralized"></View>
     </View>
   );
 }

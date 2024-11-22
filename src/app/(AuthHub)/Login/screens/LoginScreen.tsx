@@ -8,7 +8,7 @@ export default function Login() {
   return (
     <Background>
       <Watermark />
-      <View className="h-full justify-center items-center">
+      <View className="h-full centralized">
         <Background.Transparent>
           <LoginContent />
         </Background.Transparent>

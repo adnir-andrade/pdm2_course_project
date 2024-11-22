@@ -7,13 +7,13 @@ import LoginForm from "./LoginForm";
 export default function LoginContent() {
   return (
     <View className="flex flex-col shrink">
-      <View className="basis-1/6 justify-center items-center">
+      <View className="basis-1/6 centralized">
         <Logo />
       </View>
-      <View className="basis-4/6 justify-center items-center gap-10 w-full px-7 shrink">
+      <View className="basis-4/6 centralized gap-10 w-full px-7 shrink">
         <LoginForm />
       </View>
-      <View className="basis-1/6 justify-center items-center">
+      <View className="basis-1/6 centralized">
         <Footer />
       </View>
     </View>

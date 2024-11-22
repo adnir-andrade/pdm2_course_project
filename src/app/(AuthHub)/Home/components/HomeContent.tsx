@@ -18,14 +18,14 @@ export default function HomeContent() {
 
   return (
     <View className="flex flex-col">
-      <View className="basis-1/6 justify-center items-center">
+      <View className="basis-1/6 centralized">
         <Logo />
       </View>
-      <View className="w-5/6 basis-4/6 justify-center items-center self-center gap-10">
+      <View className="w-5/6 basis-4/6 centralized self-center gap-10">
         <Button title="Sign In" onPress={signInHandler} />
         <Button title="Log In" onPress={logInHandler} />
       </View>
-      <View className="basis-1/6 justify-center items-center gap-3">
+      <View className="basis-1/6 centralized gap-3">
         <Footer />
       </View>
     </View>

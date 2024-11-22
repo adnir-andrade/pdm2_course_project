@@ -19,9 +19,7 @@ export default function TabBarIcon({ routeName, focused }: CustomTabProps) {
   const chosenColor = focused ? "#c29f41" : "#cfbe86";
 
   return (
-    <View
-      className={`shadow-lg h-full w-full justify-center items-center pt-8`}
-    >
+    <View className={`shadow-lg h-full w-full pt-8 centralized`}>
       <Icon
         name={getIcon(routeName)}
         color={chosenColor}

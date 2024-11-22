@@ -11,7 +11,7 @@ export default function CharactersScreen() {
     <Background>
       <Watermark />
       <View className="flex-1 flex-col">
-        <View className="basis-[15%] w-full px-1 justify-center items-center">
+        <View className="basis-[15%] w-full px-1 centralized">
           <Text.Title>Campaign name goes here</Text.Title>
         </View>
         <View className="items-center h-full max-h-[90%]">

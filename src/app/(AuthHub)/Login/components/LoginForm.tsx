@@ -30,7 +30,7 @@ export default function LoginForm() {
   };
 
   return (
-    <View className="basis-4/6 justify-center items-center gap-10 w-full px-7 shrink">
+    <View className="basis-4/6 centralized gap-10 w-full px-7 shrink">
       <Input
         label="E-mail"
         textContentType={"emailAddress"}

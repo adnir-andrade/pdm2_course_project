@@ -64,3 +64,9 @@
 .text-simple {
     @apply font-gowun-regular text-themys-soft-peach
 }
+
+/* Utils variants */
+
+.centralized {
+    @apply justify-center items-center
+}
