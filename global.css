@@ -46,7 +46,7 @@
 
 /* Texts variants */
 .text {
-    @apply font-cinzel-bold text-themys-straw;
+    @apply font-cinzel-bold text-themys-straw shadow-contrast;
 }
 
 .text-decorated {
