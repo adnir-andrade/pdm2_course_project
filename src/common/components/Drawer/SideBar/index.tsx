@@ -14,6 +14,7 @@ export default function SideBar({ state, descriptors, ...props }: SideBarProps) 
       </View>
       <DrawerContentScrollView bounces={false}>
         <View className={`gap-1 mb-20`}>
+          {/*TODO: Ask for professor Andres help here*/}
           <SideBarButton
               label={"Character Sheet"}
               iconColor={"normal"}
