@@ -2,7 +2,6 @@ import { View } from "react-native";
 import React from "react";
 import Background from "../../../../../common/components/Background";
 import Watermark from "../../../../../common/components/Watermark";
-import Footer from "../../../../../common/components/Footer";
 import CharactersContent from "../components/CharactersContent";
 import Text from "../../../../../common/components/Text";
 
@@ -14,12 +13,11 @@ export default function CharactersScreen() {
         <View className="basis-[15%] w-full px-1 centralized">
           <Text.Title>Campaign name goes here</Text.Title>
         </View>
-        <View className="items-center h-full max-h-[90%]">
+        <View className="items-center h-full max-h-[95%]">
           <Background.Transparent>
             <CharactersContent />
           </Background.Transparent>
         </View>
-        <Footer />
       </View>
     </Background>
   );

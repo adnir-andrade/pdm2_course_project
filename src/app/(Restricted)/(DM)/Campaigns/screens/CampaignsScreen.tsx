@@ -9,11 +9,11 @@ export default function CampaignsScreen() {
   return (
     <Background>
       <Watermark />
-      <View className="flex-1 flex-col">
+      <View className="flex-1 flex-col pt-14">
         <View className="basis-[15%] w-full px-1 centralized">
           <Text.Title>Select a{"\n"}Campaign</Text.Title>
         </View>
-        <View className="items-center h-full max-h-[90%]">
+        <View className="items-center h-full max-h-[95%]">
           <Background.Transparent>
             <CampaignsContent />
           </Background.Transparent>
