@@ -12,7 +12,7 @@ export default function SideBar({ state, descriptors, ...props }: SideBarProps) 
       <View className={`basis-[40%] items-center`}>
         <Profile />
       </View>
-      <DrawerContentScrollView className={`h-full`} bounces={false}>
+      <DrawerContentScrollView bounces={false}>
         <View className={`gap-1 mb-20`}>
           <SideBarButton
               label={"Character Sheet"}
