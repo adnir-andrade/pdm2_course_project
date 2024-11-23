@@ -2,7 +2,7 @@ import React from "react";
 import {View} from "react-native";
 import Profile from "./components/Profile";
 import SideBarButton from "./components/SideBarButton";
-import {DrawerContentComponentProps, DrawerContentScrollView, DrawerItemList} from "@react-navigation/drawer";
+import {DrawerContentComponentProps, DrawerContentScrollView} from "@react-navigation/drawer";
 
 type SideBarProps = {} & DrawerContentComponentProps;
 
