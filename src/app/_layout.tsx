@@ -3,6 +3,7 @@ import { Stack, useRouter } from "expo-router";
 import "../../global.css";
 import useLoadFonts from "../hooks/useFonts";
 import useUserState from "../states/useUserState";
+import StackHeader from "../common/components/Stack/StackHeader";
 
 export default function Layout() {
   const fontsLoaded = useLoadFonts();
@@ -22,7 +23,12 @@ export default function Layout() {
   if (!fontsLoaded) return null;
 
   return (
-    <Stack screenOptions={{ headerShown: false }}>
+    <Stack
+      screenOptions={{
+        header: (props) => <StackHeader {...props} />,
+        headerShown: false,
+      }}
+    >
       <Stack.Screen
         name="(AuthHub)/Login/screens/LoginScreen"
         options={{

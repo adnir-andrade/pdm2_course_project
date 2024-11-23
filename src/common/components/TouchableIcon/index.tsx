@@ -14,10 +14,7 @@ export default function TouchableIcon({ icon, onPress }: TouchableIconProps) {
   const logoPath = iconPaths[icon];
 
   return (
-    <TouchableOpacity
-      className="w-full h-20 justify-center items-center"
-      onPress={onPress}
-    >
+    <TouchableOpacity className="w-full h-20 centralized" onPress={onPress}>
       <ImageBackground
         source={logoPath}
         className="w-full h-full"

@@ -9,7 +9,7 @@ type OptionsButtonProps = {
 export default function OptionsButton({ onPress }: OptionsButtonProps) {
   return (
     <TouchableOpacity
-      className="h-full w-16 absolute right-0 justify-center items-center opacity-35"
+      className="h-full w-16 absolute right-0 centralized opacity-35"
       onPress={onPress}
     >
       <Icon name="dots-vertical-alt" width="40" height="40" color="#CFBE86" />

@@ -27,6 +27,14 @@
     @apply rounded-tl-[35px] rounded-br-[35px] rounded-bl-[15px] rounded-tr-[15px];
 }
 
+.rounded-portrait {
+    @apply border-2 bg-themys shadow-glow-lg rounded-full aspect-square
+}
+
+.border-sidebar {
+    @apply border-r-2 border-themys-cod-gray
+}
+
 /* Buttons variants */
 .button {
     @apply button-base rounded-default h-[80] px-4 py-2 justify-center;
@@ -42,13 +50,27 @@
 
 /* Texts variants */
 .text {
-    @apply font-cinzel-bold text-themys-straw;
+    @apply font-cinzel-bold text-themys-straw shadow-contrast;
 }
 
 .text-decorated {
-    @apply text-themys-straw font-cinzel-decorative-bold text-shadow-lg
+    @apply text-themys-straw font-cinzel-decorative-bold shadow-contrast
+}
+
+.text-decorated-slim {
+    @apply text-themys-straw font-cinzel-decorative-regular shadow-contrast
+}
+
+.text-decorated-gold {
+    @apply text-themys-tussock font-cinzel-decorative-black shadow-contrast
 }
 
 .text-simple {
     @apply font-gowun-regular text-themys-soft-peach
+}
+
+/* Utils variants */
+
+.centralized {
+    @apply justify-center items-center
 }
