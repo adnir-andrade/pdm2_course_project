@@ -1,20 +1,27 @@
 import React from "react";
 import { View, ViewProps } from "react-native";
-import Icon from "react-native-ico-rpg-game";
+import Character from "../../../../../../assets/svgs/CharacterAlt.svg";
+import Bag from "../../../../../../assets/svgs/Bag.svg";
+import LockedBook from "../../../../../../assets/svgs/LockedBook.svg";
+import TreasureMap from "../../../../../../assets/svgs/TreasureMap.svg";
+import TavernSign from "../../../../../../assets/svgs/TavernSignAlt.svg";
+import Exit from "../../../../../../assets/svgs/Exit.svg";
+import D20 from "../../../../../../assets/svgs/D20.svg";
 
 type SideBarIconProps = {
   label: string;
   color: string;
 } & ViewProps;
 
-const getIcon = (label: string): string => {
-  if (label === "Character Sheet") return "emerald";
-  if (label === "Inventory") return "potion";
-  if (label === "Journal") return "quill-ink";
-  if (label === "Character Selection") return "player";
-  if (label === "Campaign Selection") return "scroll-unfurled";
-  if (label === "Home") return "campfire";
-  if (label === "Log Out") return "sideswipe";
+const getIcon = (label: string, color: string) => {
+  if (label === "Character Sheet") return <D20 width={40} />;
+  if (label === "Inventory") return <Bag width={40} fill={color} />;
+  if (label === "Journal") return <LockedBook width={40} fill={color} />;
+  if (label === "Character Selection") return <Character width={40} />;
+  if (label === "Campaign Selection")
+    return <TreasureMap width={40} fill={color} />;
+  if (label === "Home") return <TavernSign width={40} />;
+  if (label === "Log Out") return <Exit width={40} fill={color} />;
 
   return "perspective-dice-random";
 };
@@ -30,14 +37,5 @@ export default function SideBarIcon({
   color,
   ...rest
 }: SideBarIconProps) {
-  return (
-    <View {...rest}>
-      <Icon
-        name={getIcon(label)}
-        width={40}
-        height={40}
-        color={getColor(color)}
-      />
-    </View>
-  );
+  return <View {...rest}>{getIcon(label, getColor(color))}</View>;
 }

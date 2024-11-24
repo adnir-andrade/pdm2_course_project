@@ -4,7 +4,6 @@ import Logo from "../../../../common/components/Logo";
 import Button from "../../../../common/components/Button";
 import Footer from "./Footer";
 import { useRouter } from "expo-router";
-import Cat from "../../../../../assets/svgs/Cat.svg";
 
 export default function HomeContent() {
   const router = useRouter();
@@ -21,7 +20,6 @@ export default function HomeContent() {
     <View className="flex flex-col">
       <View className="basis-1/6 centralized">
         <Logo />
-        <Cat />
       </View>
       <View className="w-5/6 basis-4/6 centralized self-center gap-10">
         <Button title="Sign In" onPress={signInHandler} />
