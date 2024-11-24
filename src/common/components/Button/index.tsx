@@ -2,6 +2,7 @@ import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 import React from "react";
 import Slim from "./Slim";
 import Robust from "./Robust";
+import Rectangular from "./Rectangular";
 
 type ButtonProps = {
   title: string;
@@ -20,3 +21,4 @@ export default function Button({ title, onPress }: ButtonProps) {
 
 Button.Slim = Slim;
 Button.Robust = Robust;
+Button.Rectangular = Rectangular;
