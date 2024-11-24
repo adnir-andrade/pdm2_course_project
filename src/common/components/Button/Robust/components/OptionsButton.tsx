@@ -1,6 +1,6 @@
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 import React from "react";
-import Icon from "react-native-ico-dazzle-line";
+import { Icon } from "@rneui/base";
 
 type OptionsButtonProps = {
   onPress: () => void;
@@ -12,7 +12,7 @@ export default function OptionsButton({ onPress }: OptionsButtonProps) {
       className="h-full w-16 absolute right-0 centralized opacity-35"
       onPress={onPress}
     >
-      <Icon name="dots-vertical-alt" width="40" height="40" color="#CFBE86" />
+      <Icon name="more-vertical" type={"feather"} color={"#CFBE86"} />
     </TouchableOpacity>
   );
 }
