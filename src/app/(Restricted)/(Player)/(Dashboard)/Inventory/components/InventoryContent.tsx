@@ -1,7 +1,7 @@
 import { View, ViewProps } from "react-native";
 import React from "react";
 import Card from "../../../../../../common/components/Card";
-import InventoryList from "./InventoryList"; // Atualize o caminho conforme necessário
+import InventoryList from "./InventoryList";
 
 type Props = {} & ViewProps;
 
