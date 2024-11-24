@@ -52,6 +52,10 @@
     @apply button-base rounded-robust h-[70] py-3 pl-5 pr-16;
 }
 
+.button-rectangular {
+    @apply button-base rounded-card-8 h-[70] centralized;
+}
+
 /* Texts variants */
 .text {
     @apply font-cinzel-bold text-themys-straw shadow-contrast;
@@ -76,6 +80,10 @@
 /* Cards variants */
 .card-title {
     @apply bg-themys-dune/85 border-themys-cod-gray/55 border border-b-2 rounded-card-8 shadow-basic
+}
+
+.card-pill {
+    @apply bg-themys-cod-gray/30 rounded-full py-3 mb-4
 }
 
 /* Fancy line variants */
