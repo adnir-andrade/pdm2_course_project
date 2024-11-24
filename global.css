@@ -87,6 +87,10 @@
     @apply h-3 w-3 bg-themys-tussock rotate-45 shadow-glow
 }
 
+.line-faded {
+    @apply h-[1px] w-full bg-themys-straw/15 shadow-basic
+}
+
 /* Utils variants */
 
 .centralized {
