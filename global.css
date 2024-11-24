@@ -15,6 +15,10 @@
     @apply rounded-t-[20] rounded-b-[10];
 }
 
+.rounded-card-8 {
+    @apply rounded-[8];
+}
+
 .rounded-slim {
     @apply rounded-tl-2xl rounded-br-2xl rounded-bl-[7px] rounded-tr-[7px];
 }
@@ -69,8 +73,30 @@
     @apply font-gowun-regular text-themys-soft-peach
 }
 
+/* Cards variants */
+.card-title {
+    @apply bg-themys-dune/85 border-themys-cod-gray/55 border border-b-2 rounded-card-8 shadow-basic
+}
+
+/* Fancy line variants */
+.line {
+    @apply flex-1 h-1 bg-themys-tussock shadow-basic
+}
+
+.line-diamond {
+    @apply h-3 w-3 bg-themys-tussock rotate-45 shadow-glow
+}
+
+.line-faded {
+    @apply h-[1px] w-full bg-themys-straw/15 shadow-basic
+}
+
 /* Utils variants */
 
 .centralized {
     @apply justify-center items-center
+}
+
+.fullscreen {
+    @apply h-full w-full
 }
