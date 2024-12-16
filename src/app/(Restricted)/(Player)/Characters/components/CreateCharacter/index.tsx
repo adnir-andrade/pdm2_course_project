@@ -1,4 +1,4 @@
-import { Alert, Pressable, View } from "react-native";
+import { Alert, Pressable, ScrollView, View } from "react-native";
 import React, { useState } from "react";
 import Text from "../../../../../../common/components/Text";
 import Input from "../../../../../../common/components/Input";
@@ -101,43 +101,46 @@ export default function CreateCharacter({ onPress }: Props) {
             </Text>
           </Pressable>
         </View>
-        <Input
-          label={"Name"}
-          value={characterName}
-          onChangeText={setCharacterName}
-        />
-        <View className={`mt-6`}>
-          <Dropdown
-            label={"Gender"}
-            placeholder={"Select Gender"}
-            options={genderOptions}
-            selectedValue={selectedGender}
-            setterHandler={setSelectedGender}
+        <ScrollView className={`basis-full`}>
+          <Input
+            label={"Name"}
+            value={characterName}
+            onChangeText={setCharacterName}
           />
-        </View>
-        <View className={`mt-6`}>
-          <Dropdown
-            label={"Class"}
-            placeholder={"Choose a Class"}
-            options={classOptions}
-            selectedValue={selectedClass}
-            setterHandler={setSelectedClass}
-          />
-        </View>
-        <View className={`mt-6`}>
-          <Dropdown
-            label={"Race"}
-            placeholder={"Choose a Race"}
-            options={raceOptions}
-            selectedValue={selectedRace}
-            setterHandler={setSelectedRace}
-          />
-        </View>
-        <View className={`mt-12`}>
-          <Button.Rectangular onPress={handleCreateCharacter}>
-            <Text>Create Character</Text>
-          </Button.Rectangular>
-        </View>
+          <View className={`mt-6`}>
+            <Dropdown
+              label={"Gender"}
+              placeholder={"Select Gender"}
+              options={genderOptions}
+              selectedValue={selectedGender}
+              setterHandler={setSelectedGender}
+            />
+          </View>
+          <View className={`mt-6`}>
+            <Dropdown
+              label={"Race"}
+              placeholder={"Choose a Race"}
+              options={raceOptions}
+              selectedValue={selectedRace}
+              setterHandler={setSelectedRace}
+            />
+          </View>
+          <View className={`mt-6`}>
+            <Dropdown
+              label={"Class"}
+              placeholder={"Choose a Class"}
+              options={classOptions}
+              selectedValue={selectedClass}
+              setterHandler={setSelectedClass}
+            />
+          </View>
+
+          <View className={`mt-12`}>
+            <Button.Rectangular onPress={handleCreateCharacter}>
+              <Text>Create Character</Text>
+            </Button.Rectangular>
+          </View>
+        </ScrollView>
       </View>
     </View>
   );

@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
-import { FlatList, TouchableOpacity } from "react-native";
+import { ScrollView, TouchableOpacity, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import Text from "../Text";
 
@@ -20,7 +20,6 @@ export default function Dropdown({
   label,
   placeholder = "Select an Option",
   options,
-  selectedValue,
   setterHandler,
 }: props) {
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -37,7 +36,7 @@ export default function Dropdown({
   };
 
   return (
-    <>
+    <View>
       {label && <Text className={`text-decorated pl-2 mb-2`}>{label}</Text>}
       <TouchableOpacity
         onPress={toggleDropdown}
@@ -51,20 +50,18 @@ export default function Dropdown({
         />
       </TouchableOpacity>
       {dropdownVisible && (
-        <FlatList
-          data={options}
-          keyExtractor={(item) => item.value.toString()}
-          renderItem={({ item }) => (
+        <ScrollView className="border shadow-basic rounded mt-1">
+          {options.map((item) => (
             <TouchableOpacity
+              key={item.value.toString()}
               onPress={() => selectItem(item.label, item.value)}
               className="p-2 border border-themys-straw/20"
             >
               <Text>{item.label}</Text>
             </TouchableOpacity>
-          )}
-          className="border shadow-basic rounded mt-1"
-        />
+          ))}
+        </ScrollView>
       )}
-    </>
+    </View>
   );
 }
