@@ -10,25 +10,29 @@ type option = {
 
 type props = {
   label?: string;
+  placeholder?: string;
   options: option[];
-  selectedValue: string | null;
-  setterHandler: Dispatch<SetStateAction<string | null>>;
+  selectedValue: string | number | null;
+  setterHandler: Dispatch<SetStateAction<string | number | null>>;
 };
 
 export default function Dropdown({
   label,
+  placeholder = "Select an Option",
   options,
   selectedValue,
   setterHandler,
 }: props) {
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [selectedLabel, setSelectedLabel] = useState<string | null>(null);
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
 
-  const selectItem = (value: string) => {
+  const selectItem = (label: string, value: string | number) => {
     setterHandler(value);
+    setSelectedLabel(label);
     setDropdownVisible(false);
   };
 
@@ -39,7 +43,7 @@ export default function Dropdown({
         onPress={toggleDropdown}
         className="input-base flex-row justify-between items-center"
       >
-        <Text>{selectedValue ? selectedValue : "Select an option"}</Text>
+        <Text>{selectedLabel ? selectedLabel : placeholder}</Text>
         <Feather
           name={dropdownVisible ? "chevron-up" : "chevron-down"}
           size={20}
@@ -52,7 +56,7 @@ export default function Dropdown({
           keyExtractor={(item) => item.value.toString()}
           renderItem={({ item }) => (
             <TouchableOpacity
-              onPress={() => selectItem(item.value.toString())}
+              onPress={() => selectItem(item.label, item.value)}
               className="p-2 border border-themys-straw/20"
             >
               <Text>{item.label}</Text>
