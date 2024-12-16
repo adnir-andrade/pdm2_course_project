@@ -19,9 +19,7 @@ export default function Input({
   const handleBlur = () => setIsFocused(false);
 
   return (
-    <View
-      className={`w-full bg-themys h-[46] px-4 py-2 justify-center rounded shadow-input`}
-    >
+    <View className={`input-base justify-center`}>
       <TextInput
         value={value}
         onChangeText={onChangeText}
