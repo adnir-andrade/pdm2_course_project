@@ -34,10 +34,10 @@ export default function Dropdown({
 
   return (
     <>
-      <Text className={`text-decorated`}>{label}</Text>
+      <Text className={`text-decorated pl-2`}>{label}</Text>
       <TouchableOpacity
         onPress={toggleDropdown}
-        className="input-base flex-row justify-between items-center mt-1"
+        className="input-base flex-row justify-between items-center mt-2"
       >
         <Text>{selectedValue ? selectedValue : "Select an option"}</Text>
         <Feather
