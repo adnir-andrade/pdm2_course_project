@@ -30,21 +30,26 @@ export default function LoginForm() {
   };
 
   return (
-    <View className="basis-4/6 centralized gap-10 w-full px-7 shrink">
-      <Input
-        label="E-mail"
-        textContentType={"emailAddress"}
-        value={email}
-        onChangeText={setEmail}
-        autoCapitalize={"none"}
-      />
-      <Input
-        label="Password"
-        textContentType="password"
-        secureTextEntry={true}
-        value={password}
-        onChangeText={setPassword}
-      />
+    <View className="basis-4/6 w-full px-7 shrink">
+      <View className={`mb-10`}>
+        <Input
+          label="E-mail"
+          textContentType={"emailAddress"}
+          value={email}
+          onChangeText={setEmail}
+          autoCapitalize={"none"}
+        />
+      </View>
+      <View>
+        <Input
+          label="Password"
+          textContentType="password"
+          secureTextEntry={true}
+          value={password}
+          onChangeText={setPassword}
+        />
+      </View>
+
       <View className="w-full mt-12">
         <Button.Slim title="LOG IN" onPress={logInHandler} />
       </View>
