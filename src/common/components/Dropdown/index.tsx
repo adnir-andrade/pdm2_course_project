@@ -9,7 +9,7 @@ type option = {
 };
 
 type props = {
-  label: string;
+  label?: string;
   options: option[];
   selectedValue: string | null;
   setterHandler: Dispatch<SetStateAction<string | null>>;
@@ -34,10 +34,10 @@ export default function Dropdown({
 
   return (
     <>
-      <Text className={`text-decorated pl-2`}>{label}</Text>
+      {label && <Text className={`text-decorated pl-2 mb-2`}>{label}</Text>}
       <TouchableOpacity
         onPress={toggleDropdown}
-        className="input-base flex-row justify-between items-center mt-2"
+        className="input-base flex-row justify-between items-center"
       >
         <Text>{selectedValue ? selectedValue : "Select an option"}</Text>
         <Feather
