@@ -65,6 +65,10 @@
     @apply font-cinzel-bold text-themys-straw shadow-contrast;
 }
 
+.text-peach {
+    @apply font-cinzel-bold text-themys-soft-peach shadow-contrast;
+}
+
 .text-decorated {
     @apply text-themys-straw font-cinzel-decorative-bold shadow-contrast
 }
