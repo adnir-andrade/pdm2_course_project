@@ -1,5 +1,6 @@
 import { TextInput, TextInputProps, View } from "react-native";
-import React, { useState } from "react";
+import React from "react";
+import Text from "../Text";
 
 type InputProp = {
   label: string;
@@ -13,23 +14,19 @@ export default function Input({
   onChangeText,
   ...rest
 }: InputProp) {
-  const [isFocused, setIsFocused] = useState(false);
-
-  const handleFocus = () => setIsFocused(true);
-  const handleBlur = () => setIsFocused(false);
-
   return (
-    <View className={`input-base justify-center`}>
-      <TextInput
-        value={value}
-        onChangeText={onChangeText}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        className="text-themys-soft-peach font-cinzel-regular text-lg"
-        placeholder={label}
-        placeholderTextColor="rgba(241, 232, 232, 0.45)"
-        {...rest}
-      />
-    </View>
+    <>
+      {label && <Text className={`text-decorated pl-2 mb-2`}>{label}</Text>}
+      <View className={`input-base justify-center`}>
+        <TextInput
+          value={value}
+          onChangeText={onChangeText}
+          className="text-themys-soft-peach font-cinzel-regular text-lg"
+          placeholder={label}
+          placeholderTextColor="rgba(241, 232, 232, 0.45)"
+          {...rest}
+        />
+      </View>
+    </>
   );
 }
