@@ -1,36 +1,31 @@
-import { users } from "../../../../mocks/MOCK_USER";
+import { api } from "../../../../services/api";
 
-// TODO: Refactor everything after implementing an API
-const findUserByEmail = (email: string) => {
-  return users.find((user) => user.email === email);
-};
+export const attemptLogin = async (email: string, password: string) => {
+  try {
+    const response = await api.post(
+      "/api/collections/users/auth-with-password",
+      {
+        identity: email,
+        password: password,
+      },
+    );
 
-// TODO: To be removed once there is an API
-const checkPassword = (userPassword: string, inputPassword: string) => {
-  return userPassword === inputPassword;
-};
+    const data = response.data;
 
-// TODO: To be removed once there is an API
-const generateRandomToken = () => {
-  return Math.random().toString(36);
-};
-
-export const authenticateUser = async (email: string, password: string) => {
-  const user = findUserByEmail(email);
-
-  if (!user) return { success: false, message: "Email not found!" };
-
-  const isPasswordCorrect = checkPassword(user.password, password);
-
-  if (!isPasswordCorrect)
-    return { success: false, message: "Email not found!" };
-
-  const token = generateRandomToken();
-
-  return {
-    success: true,
-    message: "Log in successful",
-    user: user,
-    token: token,
-  };
+    if (data.token) {
+      console.log("Login successful");
+      console.log("Token:", data.token);
+      console.log("User:", data.record);
+      return {
+        success: true,
+        message: "Login successful",
+        user: data.record,
+        token: data.token,
+      };
+    } else {
+      return { success: false, message: "Login failed, no token received" };
+    }
+  } catch (error) {
+    return { success: false, message: "Login failed" };
+  }
 };
