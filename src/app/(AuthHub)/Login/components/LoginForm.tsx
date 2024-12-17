@@ -28,7 +28,7 @@ export default function LoginForm() {
     const response = await attemptLogin(email, password);
 
     if (response.success) {
-      login(response.user.username, response.token);
+      login(response.user.username, response.token, response.user.id);
       router.dismissAll();
       router.replace("_navigation/");
     } else {
