@@ -2,9 +2,10 @@ import { Alert, View } from "react-native";
 import React, { useState } from "react";
 import Input from "../../../../common/components/Input";
 import Button from "../../../../common/components/Button";
-import { authenticateUser } from "../services/authService";
+import { attemptLogin } from "../services/authService";
 import { useRouter } from "expo-router";
 import useUserState from "../../../../states/useUserState";
+import { userLoginSchema } from "../../../../schemas/User";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -14,19 +15,25 @@ export default function LoginForm() {
   const router = useRouter();
 
   const logInHandler = async () => {
-    const { success, message, user, token } = await authenticateUser(
-      email,
-      password,
-    );
+    const result = userLoginSchema.safeParse({ email, password });
 
-    if (success) {
-      login(user!.username, token!);
-      router.dismissAll();
-      router.replace("_navigation/");
+    if (!result.success) {
+      Alert.alert(
+        "Ops!",
+        result.error.errors.map((err) => err.message).join("\n"),
+      );
       return;
     }
 
-    Alert.alert(message);
+    const response = await attemptLogin(email, password);
+
+    if (response.success) {
+      login(response.user.username, response.token);
+      router.dismissAll();
+      router.replace("_navigation/");
+    } else {
+      Alert.alert(response.message, `\n Email or Password incorrect.`);
+    }
   };
 
   return (
