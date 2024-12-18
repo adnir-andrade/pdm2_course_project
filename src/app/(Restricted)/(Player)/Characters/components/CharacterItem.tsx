@@ -5,6 +5,7 @@ import { useRouter } from "expo-router";
 import { Character } from "../../../../../schemas/Character";
 import { useRace } from "../../../../../hooks/useRace";
 import { useKlass } from "../../../../../hooks/useKlass";
+import useCharacterState from "../../../../../states/useCharacterState";
 
 type CharacterItemProps = {
   item: Character;
@@ -12,11 +13,12 @@ type CharacterItemProps = {
 
 export const CharacterItem = ({ item }: CharacterItemProps) => {
   const router = useRouter();
+  const { setCharacter } = useCharacterState();
   const { raceName } = useRace(item.race_id);
   const { klassName } = useKlass(item.klass_id);
 
   const mainButtonHandler = (id: string) => {
-    console.log(`Main click ${id}`);
+    setCharacter(item);
     router.push("_navigation/Player/Dashboard");
   };
 
