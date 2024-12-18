@@ -16,10 +16,9 @@ export const CampaignItem = ({ item }: CampaignItemProps) => {
   const nextSessionDate = new Date(item.next_session);
   const isValidDate = !isNaN(nextSessionDate.getTime());
 
-  const mainButtonHandler = (id: string) => {
-    console.log(`Main click ${id}`);
+  const mainButtonHandler = () => {
     setCampaign(item);
-    router.push(`_navigation/Player/Characters?id=${id}`);
+    router.push(`_navigation/Player/Characters`);
   };
 
   return (
@@ -27,7 +26,7 @@ export const CampaignItem = ({ item }: CampaignItemProps) => {
       <Button.Robust
         title={item.name}
         subtitle={isValidDate ? formatDate(nextSessionDate) : "Invalid date"}
-        onPressMain={() => mainButtonHandler(item.id)}
+        onPressMain={() => mainButtonHandler()}
         onPressOptions={() => console.log(`Options Click ${item.id}`)}
       />
     </View>
