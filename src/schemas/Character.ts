@@ -1,13 +1,14 @@
 import { z } from "zod";
 
 const characterSchema = z.object({
-  id: z.number(),
-  player_id: z.number(),
+  id: z.optional(z.string()),
+  player_id: z.string(),
   name: z.string().nonempty(),
   level: z.number(),
-  gender: z.string().nullish(),
-  race_id: z.number(),
-  klass_id: z.number(),
+  gender: z.optional(z.string()),
+  race_id: z.string(),
+  klass_id: z.string(),
+  campaign_id: z.string(),
 });
 
 export { characterSchema };

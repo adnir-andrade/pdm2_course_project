@@ -5,9 +5,13 @@ import Input from "../../../../../../common/components/Input";
 import Dropdown from "../../../../../../common/components/Dropdown";
 import Button from "../../../../../../common/components/Button";
 import { characterSchema } from "../../../../../../schemas/Character";
+import { useCreateCharacter } from "../../../../../../hooks/useCreateCharacter";
+import useUserState from "../../../../../../states/useUserState";
+import useCampaignState from "../../../../../../states/useCampaignState";
 
 type Props = {
-  onPress: () => void;
+  closeModalCallback: () => void;
+  onCharacterCreated: () => void;
 };
 
 const genderOptions = [
@@ -17,33 +21,39 @@ const genderOptions = [
 ];
 
 const classOptions = [
-  { label: "Barbarian", value: 0 },
-  { label: "Bard", value: 1 },
-  { label: "Cleric", value: 2 },
-  { label: "Druid", value: 3 },
-  { label: "Fighter", value: 4 },
-  { label: "Monk", value: 5 },
-  { label: "Paladin", value: 6 },
-  { label: "Ranger", value: 7 },
-  { label: "Rogue", value: 8 },
-  { label: "Sorcerer", value: 9 },
-  { label: "Warlock", value: 10 },
-  { label: "Wizard", value: 11 },
+  { label: "Barbarian", value: "1" },
+  { label: "Bard", value: "2" },
+  { label: "Cleric", value: "3" },
+  { label: "Druid", value: "4" },
+  { label: "Fighter", value: "5" },
+  { label: "Monk", value: "6" },
+  { label: "Paladin", value: "7" },
+  { label: "Ranger", value: "8" },
+  { label: "Rogue", value: "9" },
+  { label: "Sorcerer", value: "10" },
+  { label: "Warlock", value: "11" },
+  { label: "Wizard", value: "12" },
 ];
 
 const raceOptions = [
-  { label: "Dwarf", value: 0 },
-  { label: "Elf", value: 1 },
-  { label: "Halfling", value: 2 },
-  { label: "Human", value: 3 },
-  { label: "Dragonborn", value: 4 },
-  { label: "Gnome", value: 5 },
-  { label: "Half-Elf", value: 6 },
-  { label: "Half-Orc", value: 7 },
-  { label: "Tiefling", value: 8 },
+  { label: "Dragonborn", value: "1" },
+  { label: "Dwarf", value: "2" },
+  { label: "Elf", value: "3" },
+  { label: "Gnome", value: "4" },
+  { label: "Half-Elf", value: "5" },
+  { label: "Half-Orc", value: "6" },
+  { label: "Halfling", value: "7" },
+  { label: "Human", value: "8" },
+  { label: "Tiefling", value: "9" },
 ];
 
-export default function CreateCharacter({ onPress }: Props) {
+export default function CreateCharacter({
+  closeModalCallback,
+  onCharacterCreated,
+}: Props) {
+  const { userId, token } = useUserState();
+  const { campaign } = useCampaignState();
+  const { createCharacter } = useCreateCharacter();
   const [characterName, setCharacterName] = useState<string>("");
   const [selectedGender, setSelectedGender] = useState<string | number | null>(
     null,
@@ -55,16 +65,18 @@ export default function CreateCharacter({ onPress }: Props) {
     null,
   );
 
-  const handleCreateCharacter = () => {
+  const handleCreateCharacter = async () => {
     const data = {
-      id: 1,
-      player_id: 1,
+      player_id: userId,
       name: characterName,
       level: 1,
-      gender: selectedGender,
       race_id: selectedRace,
       klass_id: selectedClass,
+      campaign_id: campaign?.id,
+      gender: selectedGender,
     };
+
+    console.log(data);
 
     const result = characterSchema.safeParse(data);
 
@@ -84,18 +96,25 @@ export default function CreateCharacter({ onPress }: Props) {
       return;
     }
 
-    console.log("Creating character!");
-    console.log(`Name: ${characterName}`);
-    console.log(`Gender: ${selectedGender}`);
-    console.log(`Race: ${selectedRace}`);
-    console.log(`Class: ${selectedClass}`);
+    const character = {
+      player_id: data.player_id,
+      name: data.name,
+      level: 1,
+      race_id: data.race_id!.toString(),
+      klass_id: selectedClass!.toString(),
+      campaign_id: campaign!.id,
+      gender: selectedGender?.toString(),
+    };
+
+    await createCharacter(character, token!);
+    onCharacterCreated();
   };
 
   return (
     <View className="flex-1 justify-center items-center bg-black/75">
       <View className="bg-themys p-6 rounded-card-8 h-[80%] w-[90%] overflow-hidden">
         <View className={`basis-1/12`}>
-          <Pressable onPress={onPress} className="mt-4">
+          <Pressable onPress={closeModalCallback} className="mt-4">
             <Text className="text-themys-tussock text-2xl font-cinzel-bold text-right">
               X
             </Text>
