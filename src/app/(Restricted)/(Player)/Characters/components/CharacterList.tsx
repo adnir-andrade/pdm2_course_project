@@ -9,8 +9,15 @@ import useCampaignState from "../../../../../states/useCampaignState";
 export default function CharacterList() {
   const { userId, token } = useUserState();
   const { campaign } = useCampaignState();
+  const { characters, loading, getCharactersByCampaignUser } = useCharacters(
+    userId,
+    campaign!.id,
+    token!,
+  );
 
-  const { characters, loading } = useCharacters(userId, campaign!.id, token!);
+  const refreshCharacters = async () => {
+    await getCharactersByCampaignUser();
+  };
 
   if (loading) {
     return (
@@ -24,10 +31,12 @@ export default function CharacterList() {
     <FlatList
       data={characters}
       renderItem={({ item }) => <CharacterItem item={item} />}
-      keyExtractor={(item) => item.id.toString()}
+      keyExtractor={(item) => item.id!}
       className="flex-1"
       showsVerticalScrollIndicator={false}
-      ListFooterComponent={() => <AddCharacter />}
+      ListFooterComponent={() => (
+        <AddCharacter onCharacterCreated={refreshCharacters} />
+      )}
     />
   );
 }

@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import Button from "../../../../../common/components/Button";
 import CreateCharacter from "./CreateCharacter";
 
-export default function AddCharacter() {
+type Props = {
+  onCharacterCreated: () => void;
+};
+
+export default function AddCharacter({ onCharacterCreated }: Props) {
   const [modalVisible, setModalVisible] = useState(false);
 
   const addCharacterHandler = () => {
@@ -23,7 +27,10 @@ export default function AddCharacter() {
         visible={modalVisible}
         onRequestClose={closeModalHandler}
       >
-        <CreateCharacter onPress={closeModalHandler} />
+        <CreateCharacter
+          closeModalCallback={closeModalHandler}
+          onCharacterCreated={onCharacterCreated}
+        />
       </Modal>
     </View>
   );
