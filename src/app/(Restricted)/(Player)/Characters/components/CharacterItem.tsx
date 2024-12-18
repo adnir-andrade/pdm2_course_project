@@ -3,24 +3,16 @@ import { View } from "react-native";
 import Button from "../../../../../common/components/Button";
 import { formatDescription } from "../services/subtitleService";
 import { useRouter } from "expo-router";
-
-type CharacterData = {
-  id: number;
-  name: string;
-  level: number;
-  gender: string;
-  race_id: number;
-  klass_id: number;
-};
+import { Character } from "../../../../../schemas/Character";
 
 type CharacterItemProps = {
-  item: CharacterData;
+  item: Character;
 };
 
 export const CharacterItem = ({ item }: CharacterItemProps) => {
   const router = useRouter();
 
-  const mainButtonHandler = (id: number) => {
+  const mainButtonHandler = (id: string) => {
     console.log(`Main click ${id}`);
     router.push("_navigation/Player/Dashboard");
   };
