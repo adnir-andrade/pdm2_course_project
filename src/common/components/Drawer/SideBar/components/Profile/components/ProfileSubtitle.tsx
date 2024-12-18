@@ -2,14 +2,18 @@ import React from "react";
 import { View, ViewProps } from "react-native";
 import Text from "../../../../../Text";
 
-type ProfileSubtitleProps = {} & ViewProps;
+type ProfileSubtitleProps = {
+  klassName: string;
+} & ViewProps;
 
-export default function ProfileSubtitle({ ...rest }: ProfileSubtitleProps) {
-  //TODO: Use global state to get Character class
+export default function ProfileSubtitle({
+  klassName,
+  ...rest
+}: ProfileSubtitleProps) {
   return (
     <View {...rest}>
       <Text className={`text-decorated-slim text-center text-xl`}>
-        The Character Class
+        The {klassName}
       </Text>
     </View>
   );
