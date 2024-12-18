@@ -3,25 +3,23 @@ import { View } from "react-native";
 import Button from "../../../../../common/components/Button";
 import { useRouter } from "expo-router";
 import { formatDate } from "../../../../../helpers/dateHelpers";
-
-type CampaignData = {
-  id: string;
-  name: string;
-  next_session: Date;
-};
+import useCampaignState from "../../../../../states/useCampaignState";
+import { Campaign } from "../../../../../schemas/Campaign";
 
 type CampaignItemProps = {
-  item: CampaignData;
+  item: Campaign;
 };
 
 export const CampaignItem = ({ item }: CampaignItemProps) => {
   const router = useRouter();
+  const { setCampaign } = useCampaignState();
   const nextSessionDate = new Date(item.next_session);
   const isValidDate = !isNaN(nextSessionDate.getTime());
 
   const mainButtonHandler = (id: string) => {
     console.log(`Main click ${id}`);
-    router.push("_navigation/Player/Characters");
+    setCampaign(item);
+    router.push(`_navigation/Player/Characters?id=${id}`);
   };
 
   return (
