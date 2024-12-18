@@ -51,5 +51,5 @@ export const useCharacters = (
     }
   }, [userId, campaignId, token]);
 
-  return { characters, loading };
+  return { characters, loading, getCharactersByCampaignUser };
 };
