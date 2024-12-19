@@ -1,16 +1,40 @@
-import { FlatList, StyleSheet } from "react-native";
-import React from "react";
+import { FlatList, Modal, StyleSheet } from "react-native";
+import React, { useState } from "react";
 import { ListItem } from "@rneui/themed";
 import { Icon } from "@rneui/base";
 import ListTitle from "./ListTitle";
 import EntryContent from "./EntryContent";
-import { journalEntries } from "../../../../../../../mocks/MOCK_JOURNAL";
+import useUserState from "../../../../../../../states/useUserState";
+import useCharacterState from "../../../../../../../states/useCharacterState";
+import { useEntries } from "../../../../../../../hooks/Journal/useEntries";
+import Button from "../../../../../../../common/components/Button";
+import AddButton from "../../../../../../../../assets/svgs/AddButton.svg";
+import CreateEntry from "./CreateEntry";
 
 export default function EntriesList() {
   const [expandedIndex, setExpandedIndex] = React.useState<number | null>(null);
+  const { token } = useUserState();
+  const { character } = useCharacterState();
+  const { entries, getEntriesByCharacter, setRefreshFlag } = useEntries(
+    character?.id!,
+    token!,
+  );
+  const [modalVisible, setModalVisible] = useState(false);
 
   const handlePress = (index: number) => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  const refreshEntries = async () => {
+    console.log(
+      "Do NOT forget to ask professor Andres about this hellish thing",
+    );
+    setRefreshFlag((prev) => !prev);
+    await getEntriesByCharacter();
+  };
+
+  const closeModalHandler = () => {
+    setModalVisible(false);
   };
 
   const renderItem = ({ item, index }: { item: any; index: number }) => (
@@ -33,21 +57,36 @@ export default function EntriesList() {
         </>
       }
     >
-      <EntryContent content={item.content} id={item.id} />
+      <EntryContent
+        content={item.content}
+        id={item.id}
+        refreshCallback={refreshEntries}
+      />
     </ListItem.Accordion>
   );
 
   return (
     <>
-      <Button.Rectangular onPress={() => console.log("Clicked!")}>
+      <Button.Rectangular onPress={() => setModalVisible(true)}>
         <AddButton width={60} height={60} />
       </Button.Rectangular>
       <FlatList
         data={entries}
         renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
+        keyExtractor={(item) => item.id!.toString()}
         className={`mt-5 mb-20`}
       />
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={closeModalHandler}
+      >
+        <CreateEntry
+          closeModalCallback={closeModalHandler}
+          refreshCallback={refreshEntries}
+        />
+      </Modal>
     </>
   );
 }
