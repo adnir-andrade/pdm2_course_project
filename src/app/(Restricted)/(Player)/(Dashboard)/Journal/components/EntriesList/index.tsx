@@ -38,12 +38,17 @@ export default function EntriesList() {
   );
 
   return (
-    <FlatList
-      data={journalEntries}
-      renderItem={renderItem}
-      keyExtractor={(item) => item.id.toString()}
-      className={`mb-20`}
-    />
+    <>
+      <Button.Rectangular onPress={() => console.log("Clicked!")}>
+        <AddButton width={60} height={60} />
+      </Button.Rectangular>
+      <FlatList
+        data={entries}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id.toString()}
+        className={`mt-5 mb-20`}
+      />
+    </>
   );
 }
 
