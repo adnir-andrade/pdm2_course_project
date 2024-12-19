@@ -3,7 +3,7 @@ import React from "react";
 import Text from "../../../../../../../../common/components/Text";
 
 type Props = {
-  id?: number;
+  id?: string;
   name: string;
   quantity: number;
   weight: number;
