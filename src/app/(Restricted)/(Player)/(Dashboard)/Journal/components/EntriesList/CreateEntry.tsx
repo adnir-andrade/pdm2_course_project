@@ -2,11 +2,12 @@ import { Alert, Pressable, ScrollView, View } from "react-native";
 import useUserState from "../../../../../../../states/useUserState";
 import useCharacterState from "../../../../../../../states/useCharacterState";
 import { useEntries } from "../../../../../../../hooks/Journal/useEntries";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { entrySchema } from "../../../../../../../schemas/Entry";
 import Text from "../../../../../../../common/components/Text";
 import Input from "../../../../../../../common/components/Input";
 import Button from "../../../../../../../common/components/Button";
+import AddButton from "../../../../../../../../assets/svgs/AddButton.svg";
 
 type Props = {
   closeModalCallback: () => void;
@@ -78,7 +79,7 @@ export default function CreateEntry({
           </View>
           <View className={`mt-12`}>
             <Button.Rectangular onPress={handleCreateEntry}>
-              <Text>Create Character</Text>
+              <AddButton width={60} height={60} />
             </Button.Rectangular>
           </View>
         </ScrollView>
