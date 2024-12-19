@@ -26,12 +26,7 @@ export default function InventoryList() {
   }
 
   const renderItem: ListRenderItem<Item> = ({ item }) => (
-    <ListLine
-      id={item.id}
-      name={item.name}
-      quantity={item.quantity}
-      weight={item.weight}
-    />
+    <ListLine item={item} />
   );
 
   const renderSeparator = () => <View className="line-faded" />;
