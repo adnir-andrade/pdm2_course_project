@@ -7,7 +7,7 @@ export const useCreateCharacter = () => {
   const [error, setError] = useState<string | null>(null);
 
   const createCharacter = async (
-    data: Character,
+    data: Omit<Character, "id">,
     token: string,
   ): Promise<Character | null> => {
     setLoading(true);

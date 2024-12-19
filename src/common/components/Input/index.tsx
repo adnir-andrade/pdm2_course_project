@@ -1,9 +1,10 @@
 import { TextInput, TextInputProps, View } from "react-native";
 import React from "react";
 import Text from "../Text";
+import LongText from "./LongText";
 
 type InputProp = {
-  label: string;
+  label?: string;
   value: string;
   onChangeText: (text: string) => void;
 } & TextInputProps;
@@ -30,3 +31,5 @@ export default function Input({
     </>
   );
 }
+
+Input.LongText = LongText;

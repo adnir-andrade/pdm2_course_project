@@ -1,19 +1,46 @@
-import { FlatList, StyleSheet } from "react-native";
-import React from "react";
+import { FlatList, Modal, StyleSheet } from "react-native";
+import React, { useState } from "react";
 import { ListItem } from "@rneui/themed";
 import { Icon } from "@rneui/base";
 import ListTitle from "./ListTitle";
 import EntryContent from "./EntryContent";
-import { journalEntries } from "../../../../../../../mocks/MOCK_JOURNAL";
+import useUserState from "../../../../../../../states/useUserState";
+import useCharacterState from "../../../../../../../states/useCharacterState";
+import { useEntries } from "../../../../../../../hooks/Journal/useEntries";
+import Button from "../../../../../../../common/components/Button";
+import AddButton from "../../../../../../../../assets/svgs/AddButton.svg";
+import CreateEntry from "./CreateEntry";
+import { Entry } from "../../../../../../../schemas/Entry";
 
 export default function EntriesList() {
   const [expandedIndex, setExpandedIndex] = React.useState<number | null>(null);
+  const { token } = useUserState();
+  const { character } = useCharacterState();
+  const { entries, getEntriesByCharacter, setRefreshFlag } = useEntries(
+    character?.id!,
+    token!,
+  );
+  const [modalVisible, setModalVisible] = useState(false);
+  const [activeEntry, setActiveEntry] = useState<Entry | null>(null);
 
   const handlePress = (index: number) => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  const renderItem = ({ item, index }: { item: any; index: number }) => (
+  const refreshEntries = async () => {
+    console.log(
+      "Do NOT forget to ask professor Andres about this hellish thing",
+    );
+    setRefreshFlag((prev) => !prev);
+    await getEntriesByCharacter();
+  };
+
+  const closeModalHandler = () => {
+    setModalVisible(false);
+    setActiveEntry(null);
+  };
+
+  const renderItem = ({ item, index }: { item: Entry; index: number }) => (
     <ListItem.Accordion
       isExpanded={expandedIndex === index}
       onPress={() => handlePress(index)}
@@ -33,17 +60,39 @@ export default function EntriesList() {
         </>
       }
     >
-      <EntryContent content={item.content} id={item.id} />
+      <EntryContent
+        entry={item}
+        refreshCallback={refreshEntries}
+        setEntry={setActiveEntry}
+        setModalVisibility={setModalVisible}
+      />
     </ListItem.Accordion>
   );
 
   return (
-    <FlatList
-      data={journalEntries}
-      renderItem={renderItem}
-      keyExtractor={(item) => item.id.toString()}
-      className={`mb-20`}
-    />
+    <>
+      <Button.Rectangular onPress={() => setModalVisible(true)}>
+        <AddButton width={60} height={60} />
+      </Button.Rectangular>
+      <FlatList
+        data={entries}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id!.toString()}
+        className={`mt-5 mb-20`}
+      />
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={closeModalHandler}
+      >
+        <CreateEntry
+          closeModalCallback={closeModalHandler}
+          refreshCallback={refreshEntries}
+          entry={activeEntry}
+        />
+      </Modal>
+    </>
   );
 }
 
