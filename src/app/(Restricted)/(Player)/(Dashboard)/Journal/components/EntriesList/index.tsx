@@ -10,6 +10,7 @@ import { useEntries } from "../../../../../../../hooks/Journal/useEntries";
 import Button from "../../../../../../../common/components/Button";
 import AddButton from "../../../../../../../../assets/svgs/AddButton.svg";
 import CreateEntry from "./CreateEntry";
+import { Entry } from "../../../../../../../schemas/Entry";
 
 export default function EntriesList() {
   const [expandedIndex, setExpandedIndex] = React.useState<number | null>(null);
@@ -20,6 +21,7 @@ export default function EntriesList() {
     token!,
   );
   const [modalVisible, setModalVisible] = useState(false);
+  const [activeEntry, setActiveEntry] = useState<Entry | null>(null);
 
   const handlePress = (index: number) => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -35,9 +37,10 @@ export default function EntriesList() {
 
   const closeModalHandler = () => {
     setModalVisible(false);
+    setActiveEntry(null);
   };
 
-  const renderItem = ({ item, index }: { item: any; index: number }) => (
+  const renderItem = ({ item, index }: { item: Entry; index: number }) => (
     <ListItem.Accordion
       isExpanded={expandedIndex === index}
       onPress={() => handlePress(index)}
@@ -58,9 +61,10 @@ export default function EntriesList() {
       }
     >
       <EntryContent
-        content={item.content}
-        id={item.id}
+        entry={item}
         refreshCallback={refreshEntries}
+        setEntry={setActiveEntry}
+        setModalVisibility={setModalVisible}
       />
     </ListItem.Accordion>
   );
@@ -85,6 +89,7 @@ export default function EntriesList() {
         <CreateEntry
           closeModalCallback={closeModalHandler}
           refreshCallback={refreshEntries}
+          entry={activeEntry}
         />
       </Modal>
     </>

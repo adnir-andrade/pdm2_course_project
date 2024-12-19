@@ -2,34 +2,35 @@ import { Alert, Pressable, ScrollView, View } from "react-native";
 import useUserState from "../../../../../../../states/useUserState";
 import useCharacterState from "../../../../../../../states/useCharacterState";
 import { useEntries } from "../../../../../../../hooks/Journal/useEntries";
-import React, { useRef, useState } from "react";
-import { entrySchema } from "../../../../../../../schemas/Entry";
+import { useRef, useState } from "react";
+import { Entry, entrySchema } from "../../../../../../../schemas/Entry";
 import Text from "../../../../../../../common/components/Text";
 import Input from "../../../../../../../common/components/Input";
 import Button from "../../../../../../../common/components/Button";
-import AddButton from "../../../../../../../../assets/svgs/AddButton.svg";
 
 type Props = {
   closeModalCallback: () => void;
   refreshCallback: () => void;
+  entry?: Entry | null;
 };
 
 export default function CreateEntry({
   closeModalCallback,
   refreshCallback,
+  entry,
 }: Props) {
   const { token } = useUserState();
   const { character } = useCharacterState();
-  const { createEntry } = useEntries(character?.id!, token!);
-  const [title, setTitle] = useState<string>("");
-  const [content, setContent] = useState<string>("");
+  const { createEntry, updateEntry } = useEntries(character?.id!, token!);
+  const [title, setTitle] = useState<string>(entry?.title || "");
+  const [content, setContent] = useState<string>(entry?.content || "");
   const scrollViewRef = useRef<ScrollView>(null);
 
   const handleCreateEntry = async () => {
     const data = {
       title: title,
       content: content,
-      character_id: character?.id,
+      character_id: character?.id!,
     };
 
     const result = entrySchema.safeParse(data);
@@ -44,13 +45,11 @@ export default function CreateEntry({
       return;
     }
 
-    const entry = {
-      title: data.title,
-      content: data.content,
-      character_id: data.character_id!,
-    };
-
-    await createEntry(entry);
+    if (entry) {
+      await updateEntry(data, entry.id!);
+    } else {
+      await createEntry(data);
+    }
     closeModalCallback();
     refreshCallback();
   };
@@ -79,7 +78,7 @@ export default function CreateEntry({
           </View>
           <View className={`mt-12`}>
             <Button.Rectangular onPress={handleCreateEntry}>
-              <AddButton width={60} height={60} />
+              <Text>{entry ? "Edit Entry" : "Add Entry"}</Text>
             </Button.Rectangular>
           </View>
         </ScrollView>
