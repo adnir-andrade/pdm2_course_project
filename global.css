@@ -14,6 +14,10 @@
     @apply w-full bg-themys h-[46] px-4 py-2 rounded shadow-input;
 }
 
+.input-long-text {
+    @apply w-full bg-themys px-4 py-2 rounded shadow-input;
+}
+
 /* Border classes */
 .rounded-card {
     @apply rounded-t-[20] rounded-b-[10];
