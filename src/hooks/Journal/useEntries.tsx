@@ -79,12 +79,12 @@ export const useEntries = (characterId: string, token: string) => {
     }
   };
 
-  const updateEntry = async (entryId: string, entryData: Partial<Entry>) => {
+  const updateEntry = async (entry: Entry, id: string) => {
     setLoading(true);
     try {
-      const response = await api.put<{ item: Entry }>(
-        `/api/collections/entries/records/${entryId}`,
-        entryData,
+      const response = await api.patch<{ item: Entry }>(
+        `/api/collections/entries/records/${id}`,
+        entry,
         {
           headers: {
             Authorization: token,
