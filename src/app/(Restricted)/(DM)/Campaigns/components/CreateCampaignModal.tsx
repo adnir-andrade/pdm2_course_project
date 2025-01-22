@@ -1,9 +1,11 @@
-import { Pressable, View } from "react-native";
+import { Alert, Pressable, View } from "react-native";
 import React, { useState } from "react";
 import useUserState from "../../../../../states/useUserState";
 import Text from "../../../../../common/components/Text";
 import Input from "../../../../../common/components/Input";
 import Button from "../../../../../common/components/Button";
+import { useCreateCampaign } from "../../../../../hooks/useCreateCampaign";
+import { campaignSchema } from "../../../../../schemas/Campaign";
 
 type Props = {
   closeModalCallback: () => void;
@@ -15,7 +17,7 @@ export default function CreateCampaignModal({
   onCreation,
 }: Props) {
   const { userId, token } = useUserState();
-  // const { createCharacter } = useCreateCharacter();
+  const { createCampaign } = useCreateCampaign();
   const [campaignName, setCampaignName] = useState<string>("");
 
   const handleCreate = async () => {
@@ -26,24 +28,24 @@ export default function CreateCampaignModal({
 
     console.log(data);
 
-    // const result = characterSchema.safeParse(data);
+    const result = campaignSchema.safeParse(data);
 
-    // if (!result.success) {
-    //   const errors = result.error.format();
-    //   let errorMessage = "";
-    //   if (errors.name?._errors) {
-    //     errorMessage += `Name can't be blank\n`;
-    //   }
-    //   Alert.alert("Ops!", errorMessage.trim());
-    //   return;
-    // }
+    if (!result.success) {
+      const errors = result.error.format();
+      let errorMessage = "";
+      if (errors.name?._errors) {
+        errorMessage += `Name can't be blank\n`;
+      }
+      Alert.alert("Ops!", errorMessage.trim());
+      return;
+    }
 
     const campaign = {
       dm_id: data.dm_id,
       name: data.name,
     };
 
-    // await createCharacter(character, token!);
+    await createCampaign(campaign, token!);
     onCreation();
   };
 
