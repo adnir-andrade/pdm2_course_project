@@ -9,6 +9,11 @@ export default function CampaignsList() {
   const { userId, token } = useUserState();
   const { campaigns, loading } = useCampaigns(userId, token!);
 
+  const refreshCampaigns = async () => {
+    console.log("Campaign created! Refreshing");
+    // await getCharactersByCampaignUser();
+  };
+
   if (loading) {
     return (
       <View className={`flex-1 centralized bg-black`}>
@@ -24,7 +29,7 @@ export default function CampaignsList() {
       keyExtractor={(item) => item.id.toString()}
       className="flex-1"
       showsVerticalScrollIndicator={false}
-      ListFooterComponent={() => <AddCampaign />}
+      ListFooterComponent={() => <AddCampaign onCreation={refreshCampaigns} />}
     />
   );
 }
