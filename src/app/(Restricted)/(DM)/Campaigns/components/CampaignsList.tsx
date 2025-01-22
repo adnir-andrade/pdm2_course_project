@@ -7,11 +7,13 @@ import { useCampaigns } from "../../../../../hooks/useCampaigns";
 
 export default function CampaignsList() {
   const { userId, token } = useUserState();
-  const { campaigns, loading } = useCampaigns(userId, token!);
+  const { campaigns, loading, getCampaignsByUser } = useCampaigns(
+    userId,
+    token!,
+  );
 
   const refreshCampaigns = async () => {
-    console.log("Campaign created! Refreshing");
-    // await getCharactersByCampaignUser();
+    await getCampaignsByUser();
   };
 
   if (loading) {
