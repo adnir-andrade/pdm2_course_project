@@ -28,7 +28,7 @@ export default function CampaignsList() {
     <FlatList
       data={campaigns}
       renderItem={({ item }) => <CampaignItem item={item} />}
-      keyExtractor={(item) => item.id.toString()}
+      keyExtractor={(item) => item.id!.toString()}
       className="flex-1"
       showsVerticalScrollIndicator={false}
       ListFooterComponent={() => <AddCampaign onCreation={refreshCampaigns} />}
