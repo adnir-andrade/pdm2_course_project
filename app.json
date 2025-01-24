@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "themys",
-    "slug": "themys",
+    "name": "Themys",
+    "slug": "themys-pdm2",
     "scheme": "themys-scheme",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -19,7 +19,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "versionCode": 1,
+      "package": "com.hades.themyspd2"
     },
     "web": {
       "bundler": "metro",
@@ -28,6 +30,15 @@
     "plugins": [
       "expo-router",
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "abd58485-fed5-4b27-9c69-8834e9e1dab9"
+      }
+    },
+    "owner": "adnir"
   }
 }
