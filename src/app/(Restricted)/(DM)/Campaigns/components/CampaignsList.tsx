@@ -7,7 +7,14 @@ import { useCampaigns } from "../../../../../hooks/useCampaigns";
 
 export default function CampaignsList() {
   const { userId, token } = useUserState();
-  const { campaigns, loading } = useCampaigns(userId, token!);
+  const { campaigns, loading, getCampaignsByUser } = useCampaigns(
+    userId,
+    token!,
+  );
+
+  const refreshCampaigns = async () => {
+    await getCampaignsByUser();
+  };
 
   if (loading) {
     return (
@@ -24,7 +31,7 @@ export default function CampaignsList() {
       keyExtractor={(item) => item.id.toString()}
       className="flex-1"
       showsVerticalScrollIndicator={false}
-      ListFooterComponent={() => <AddCampaign />}
+      ListFooterComponent={() => <AddCampaign onCreation={refreshCampaigns} />}
     />
   );
 }

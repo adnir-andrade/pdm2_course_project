@@ -38,5 +38,5 @@ export const useCampaigns = (userId: string, token: string) => {
     }
   }, [userId, token]);
 
-  return { campaigns, loading };
+  return { campaigns, loading, getCampaignsByUser };
 };
