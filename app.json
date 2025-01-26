@@ -39,6 +39,12 @@
         "projectId": "abd58485-fed5-4b27-9c69-8834e9e1dab9"
       }
     },
-    "owner": "adnir"
+    "owner": "adnir",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/abd58485-fed5-4b27-9c69-8834e9e1dab9"
+    }
   }
 }
