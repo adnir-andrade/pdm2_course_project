@@ -6,6 +6,14 @@
     "apk": {
       "android": {
         "buildType": "apk"
+      },
+      "channel": "apk"
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "android": {
+        "buildType": "apk"
       }
     }
   }
